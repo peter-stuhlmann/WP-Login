@@ -1,0 +1,17 @@
+* text=auto eol=lf
+*.woff2 binary
+*.png binary
+
+# Kept out of `git archive` exports (release zips), see also .distignore.
+/tests export-ignore
+/bin export-ignore
+/docs export-ignore
+/.github export-ignore
+/.distignore export-ignore
+/phpcs.xml.dist export-ignore
+/phpstan.neon.dist export-ignore
+/phpunit.xml.dist export-ignore
+/phpunit-multisite.xml.dist export-ignore
+/playwright.config.mjs export-ignore
+/vitest.config.mjs export-ignore
+/wp-tests-config-sample.php export-ignore

@@ -1,0 +1,64 @@
+{
+    "name": "portier/portier",
+    "description": "Modern, accessible custom login for WordPress.",
+    "type": "wordpress-plugin",
+    "license": "GPL-2.0-or-later",
+    "homepage": "https://github.com/peter-stuhlmann/WP-Login",
+    "authors": [
+        {
+            "name": "Peter R. Stuhlmann",
+            "homepage": "https://peter-stuhlmann-webentwicklung.de"
+        }
+    ],
+    "require": {
+        "php": ">=8.1"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^9.6",
+        "yoast/phpunit-polyfills": "^2.0 || ^3.0 || ^4.0",
+        "wp-phpunit/wp-phpunit": "*",
+        "squizlabs/php_codesniffer": "^3.10",
+        "wp-coding-standards/wpcs": "^3.1",
+        "dealerdirect/phpcodesniffer-composer-installer": "^1.0",
+        "phpstan/phpstan": "^1.12 || ^2.0",
+        "szepeviktor/phpstan-wordpress": "*",
+        "phpstan/extension-installer": "^1.4",
+        "wp-cli/i18n-command": "^2.6"
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Portier\\": "src/",
+            "Portier\\Tests\\": "tests/"
+        }
+    },
+    "config": {
+        "sort-packages": true,
+        "platform": {
+            "php": "8.1.0"
+        },
+        "allow-plugins": {
+            "dealerdirect/phpcodesniffer-composer-installer": true,
+            "phpstan/extension-installer": true
+        }
+    },
+    "scripts": {
+        "test": "phpunit --testsuite unit,integration",
+        "test:unit": "phpunit --testsuite unit",
+        "test:integration": "phpunit --testsuite integration",
+        "test:multisite": "phpunit --testsuite integration --configuration phpunit-multisite.xml.dist",
+        "lint": "phpcs",
+        "lint:fix": "phpcbf",
+        "analyse": "phpstan analyse --memory-limit=1G",
+        "i18n": [
+            "@i18n:pot",
+            "@i18n:po",
+            "@i18n:compile"
+        ],
+        "i18n:pot": "@php vendor/wp-cli/wp-cli/php/boot-fs.php i18n make-pot . languages/portier.pot --domain=portier --exclude=node_modules,vendor,tests,assets/src,coverage,.playwright-mcp,bin --skip-audit",
+        "i18n:po": "python bin/i18n.py",
+        "i18n:compile": [
+            "@php vendor/wp-cli/wp-cli/php/boot-fs.php i18n make-mo languages/",
+            "@php vendor/wp-cli/wp-cli/php/boot-fs.php i18n make-json languages/"
+        ]
+    }
+}

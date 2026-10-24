@@ -1,0 +1,74 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  php:
+    name: PHP ${{ matrix.php }} – WP tests (${{ matrix.suite }})
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        php: ['8.1', '8.2', '8.3', '8.4']
+        suite: [single, multisite]
+    services:
+      mysql:
+        image: mysql:8.0
+        env:
+          MYSQL_ROOT_PASSWORD: root
+          MYSQL_DATABASE: portier_tests
+        ports: ['3306:3306']
+        options: --health-cmd="mysqladmin ping" --health-interval=10s --health-timeout=5s --health-retries=5
+    env:
+      WP_TESTS_DB_PASSWORD: root
+      WP_TESTS_DB_HOST: 127.0.0.1:3306
+      WP_CORE_DIR: /tmp/wordpress/
+    steps:
+      - uses: actions/checkout@v4
+      - uses: shivammathur/setup-php@v2
+        with:
+          php-version: ${{ matrix.php }}
+          coverage: none
+      - run: composer install --no-interaction --no-progress
+      - name: Download WordPress core
+        run: |
+          mkdir -p /tmp/wordpress
+          curl -sSL https://wordpress.org/latest.tar.gz | tar -xz --strip-components=1 -C /tmp/wordpress
+      - name: PHPUnit
+        run: |
+          if [ "${{ matrix.suite }}" = "multisite" ]; then
+            vendor/bin/phpunit -c phpunit-multisite.xml.dist
+          else
+            vendor/bin/phpunit --no-coverage
+          fi
+
+  static:
+    name: PHPCS & PHPStan
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: shivammathur/setup-php@v2
+        with:
+          php-version: '8.3'
+          coverage: none
+      - run: composer install --no-interaction --no-progress
+      - run: vendor/bin/phpcs
+      - run: vendor/bin/phpstan analyse --memory-limit=1G --no-progress
+
+  js:
+    name: JS – lint, test, build
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - run: npm ci
+      - run: npm run lint:js
+      - run: npm run lint:css
+      - run: npm run test:js
+      - run: npm run build

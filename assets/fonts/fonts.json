@@ -1,0 +1,152 @@
+{
+	"geist": {
+		"family": "Geist",
+		"license": "GEIST-LICENSE.txt",
+		"faces": [
+			{
+				"file": "geist-variable.woff2",
+				"weight": "100 900",
+				"style": "normal",
+				"range": ""
+			}
+		]
+	},
+	"plus-jakarta-sans": {
+		"family": "Plus Jakarta Sans",
+		"license": "plus-jakarta-sans/LICENSE.txt",
+		"faces": [
+			{
+				"file": "plus-jakarta-sans/plus-jakarta-sans-latin-ext-wght-normal.woff2",
+				"weight": "200 800",
+				"style": "normal",
+				"range": "U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+0304,U+0308,U+0329,U+1D00-1DBF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF"
+			},
+			{
+				"file": "plus-jakarta-sans/plus-jakarta-sans-latin-wght-normal.woff2",
+				"weight": "200 800",
+				"style": "normal",
+				"range": "U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD"
+			}
+		]
+	},
+	"space-grotesk": {
+		"family": "Space Grotesk",
+		"license": "space-grotesk/LICENSE.txt",
+		"faces": [
+			{
+				"file": "space-grotesk/space-grotesk-latin-ext-wght-normal.woff2",
+				"weight": "300 700",
+				"style": "normal",
+				"range": "U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+0304,U+0308,U+0329,U+1D00-1DBF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF"
+			},
+			{
+				"file": "space-grotesk/space-grotesk-latin-wght-normal.woff2",
+				"weight": "300 700",
+				"style": "normal",
+				"range": "U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD"
+			}
+		]
+	},
+	"manrope": {
+		"family": "Manrope",
+		"license": "manrope/LICENSE.txt",
+		"faces": [
+			{
+				"file": "manrope/manrope-latin-ext-wght-normal.woff2",
+				"weight": "200 800",
+				"style": "normal",
+				"range": "U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+0304,U+0308,U+0329,U+1D00-1DBF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF"
+			},
+			{
+				"file": "manrope/manrope-latin-wght-normal.woff2",
+				"weight": "200 800",
+				"style": "normal",
+				"range": "U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD"
+			}
+		]
+	},
+	"bricolage-grotesque": {
+		"family": "Bricolage Grotesque",
+		"license": "bricolage-grotesque/LICENSE.txt",
+		"faces": [
+			{
+				"file": "bricolage-grotesque/bricolage-grotesque-latin-ext-wght-normal.woff2",
+				"weight": "200 800",
+				"style": "normal",
+				"range": "U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+0304,U+0308,U+0329,U+1D00-1DBF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF"
+			},
+			{
+				"file": "bricolage-grotesque/bricolage-grotesque-latin-wght-normal.woff2",
+				"weight": "200 800",
+				"style": "normal",
+				"range": "U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD"
+			}
+		]
+	},
+	"ibm-plex-sans": {
+		"family": "IBM Plex Sans",
+		"license": "ibm-plex-sans/LICENSE.txt",
+		"faces": [
+			{
+				"file": "ibm-plex-sans/ibm-plex-sans-latin-ext-wght-normal.woff2",
+				"weight": "100 700",
+				"style": "normal",
+				"range": "U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+0304,U+0308,U+0329,U+1D00-1DBF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF"
+			},
+			{
+				"file": "ibm-plex-sans/ibm-plex-sans-latin-wght-normal.woff2",
+				"weight": "100 700",
+				"style": "normal",
+				"range": "U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD"
+			}
+		]
+	},
+	"instrument-serif": {
+		"family": "Instrument Serif",
+		"license": "instrument-serif/LICENSE.txt",
+		"faces": [
+			{
+				"file": "instrument-serif/instrument-serif-latin-ext-400-normal.woff2",
+				"weight": "400",
+				"style": "normal",
+				"range": "U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+0304,U+0308,U+0329,U+1D00-1DBF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF"
+			},
+			{
+				"file": "instrument-serif/instrument-serif-latin-400-normal.woff2",
+				"weight": "400",
+				"style": "normal",
+				"range": "U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD"
+			},
+			{
+				"file": "instrument-serif/instrument-serif-latin-ext-400-italic.woff2",
+				"weight": "400",
+				"style": "italic",
+				"range": "U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+0304,U+0308,U+0329,U+1D00-1DBF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF"
+			},
+			{
+				"file": "instrument-serif/instrument-serif-latin-400-italic.woff2",
+				"weight": "400",
+				"style": "italic",
+				"range": "U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD"
+			}
+		]
+	},
+	"archivo-black": {
+		"family": "Archivo Black",
+		"license": "archivo-black/LICENSE.txt",
+		"faces": [
+			{
+				"file": "archivo-black/archivo-black-latin-ext-400-normal.woff2",
+				"weight": "400",
+				"style": "normal",
+				"range": "U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+0304,U+0308,U+0329,U+1D00-1DBF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF"
+			},
+			{
+				"file": "archivo-black/archivo-black-latin-400-normal.woff2",
+				"weight": "400",
+				"style": "normal",
+				"range": "U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD"
+			}
+		]
+	}
+}

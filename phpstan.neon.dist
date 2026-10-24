@@ -1,0 +1,15 @@
+parameters:
+    level: 8
+    paths:
+        - portier.php
+        - uninstall.php
+        - src
+    bootstrapFiles:
+        - tests/phpstan-bootstrap.php
+    # Values depend on wp-config.php.
+    dynamicConstantNames:
+        - COOKIEPATH
+        - COOKIE_DOMAIN
+        - COOKIEHASH
+        - PORTIER_DISABLE
+    treatPhpDocTypesAsCertain: false

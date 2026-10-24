@@ -1,0 +1,29 @@
+# Not part of a release (wp dist-archive). Keep assets/src: wordpress.org requires readable sources.
+/.git
+/.github
+/.playwright-mcp
+/bin
+/coverage
+/docs
+/node_modules
+/playwright-report
+/test-results
+# Tests contain a local test identity provider and test-only keys – never ship them.
+/tests
+/vendor
+/.distignore
+/.gitattributes
+/.gitignore
+/.phpunit.result.cache
+/composer.json
+/composer.lock
+/package.json
+/package-lock.json
+/phpcs.xml.dist
+/phpstan.neon.dist
+/phpunit.xml.dist
+/phpunit-multisite.xml.dist
+/playwright.config.mjs
+/vitest.config.mjs
+/wp-tests-config-sample.php
+/wp-tests-config.php

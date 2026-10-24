@@ -1,0 +1,3072 @@
+# Copyright (C) 2026 Peter R. Stuhlmann
+# This file is distributed under the GPL-2.0-or-later.
+msgid ""
+msgstr ""
+"Project-Id-Version: Portier 1.0.0\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/login\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2026-10-26T00:59:33+01:00\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"X-Generator: WP-CLI 2.12.0\n"
+"X-Domain: portier\n"
+
+#. Plugin Name of the plugin
+#: portier.php:4
+#: src/Admin/AdminPage.php:41
+#: src/Admin/Skeleton.php:191
+#: build/admin.js:20
+msgid "Portier"
+msgstr ""
+
+#. Plugin URI of the plugin
+#: portier.php:5
+msgid "https://github.com/peter-stuhlmann/WP-Login"
+msgstr ""
+
+#. Description of the plugin
+#: portier.php:6
+msgid "A modern, accessible custom login for WordPress: own login URL, beautiful templates, secure by default."
+msgstr ""
+
+#. Author of the plugin
+#: portier.php:10
+msgid "Peter R. Stuhlmann"
+msgstr ""
+
+#. Author URI of the plugin
+#: portier.php:11
+msgid "https://peter-stuhlmann-webentwicklung.de"
+msgstr ""
+
+#: src/Admin/AdminPage.php:40
+msgid "Portier – Login settings"
+msgstr ""
+
+#: src/Admin/AdminPage.php:76
+msgid "The Portier settings need JavaScript. Please enable it in your browser."
+msgstr ""
+
+#: src/Admin/AdminPage.php:123
+#: src/Admin/Skeleton.php:277
+#: build/admin.js:7
+#: build/admin.js:19
+msgid "Login methods"
+msgstr ""
+
+#: src/Admin/AdminPage.php:124
+#: build/admin.js:9
+#: build/admin.js:19
+msgid "Security"
+msgstr ""
+
+#: src/Admin/AdminPage.php:125
+#: build/admin.js:19
+msgid "Design"
+msgstr ""
+
+#: src/Admin/AdminPage.php:126
+#: build/admin.js:3
+#: build/admin.js:9
+#: build/admin.js:19
+msgid "Registration"
+msgstr ""
+
+#: src/Admin/AdminPage.php:127
+#: build/admin.js:19
+msgid "Advanced"
+msgstr ""
+
+#: src/Admin/AdminPage.php:146
+msgid "Settings"
+msgstr ""
+
+#: src/Admin/PasskeyProfileSection.php:56
+#: src/Audit/SettingsDiff.php:169
+#: src/Audit/SettingsDiff.php:206
+#: build/admin.js:6
+#: build/admin.js:8
+msgid "Passkeys"
+msgstr ""
+
+#: src/Admin/PasskeyProfileSection.php:59
+msgid "Your passkeys"
+msgstr ""
+
+#: src/Admin/PasskeyProfileSection.php:67
+msgid "Log in with your fingerprint, face or device PIN – no password, no code. Passkeys only work on this site, so phishing pages cannot use them."
+msgstr ""
+
+#: src/Admin/PasskeyProfileSection.php:71
+msgid "Passkeys of this account. Delete one if its device was lost."
+msgstr ""
+
+#. translators: %s: date and time
+#: src/Admin/PasskeyProfileSection.php:82
+#: build/profile.js:2
+#, php-format,js-format
+msgid "Added %s"
+msgstr ""
+
+#: src/Admin/PasskeyProfileSection.php:89
+msgid "No passkeys yet."
+msgstr ""
+
+#: src/Admin/PasskeyProfileSection.php:94
+msgid "Name (optional)"
+msgstr ""
+
+#: src/Admin/PasskeyProfileSection.php:98
+msgid "Add a passkey"
+msgstr ""
+
+#: src/Admin/PasskeyProfileSection.php:101
+msgid "E.g. “iPhone” or “Work laptop”. Without a name, browser and system are used."
+msgstr ""
+
+#: src/Admin/PasskeyProfileSection.php:109
+msgid "Passkeys are switched off on this site. Existing passkeys cannot be used to log in."
+msgstr ""
+
+#: src/Admin/PasskeyProfileSection.php:110
+msgid "Passkeys need a secure connection (HTTPS)."
+msgstr ""
+
+#: src/Admin/PasskeyProfileSection.php:114
+msgid "Managing passkeys needs JavaScript."
+msgstr ""
+
+#: src/Admin/ProfileSection.php:69
+#: src/Audit/SettingsDiff.php:164
+#: src/Frontend/Controller.php:100
+#: src/Frontend/TwoFactorScreens.php:72
+#: templates/views/two-factor.php:14
+#: build/admin.js:2
+#: build/admin.js:9
+msgid "Two-factor authentication"
+msgstr ""
+
+#: src/Admin/ProfileSection.php:72
+msgid "Status"
+msgstr ""
+
+#: src/Admin/ProfileSection.php:76
+msgid "Active – protected with an authenticator app."
+msgstr ""
+
+#: src/Admin/ProfileSection.php:76
+msgid "Not set up."
+msgstr ""
+
+#: src/Admin/ProfileSection.php:79
+msgid "Required for this account’s role."
+msgstr ""
+
+#: src/Admin/ProfileSection.php:85
+msgid "It can no longer be read because the site’s security keys changed. Turn it off and set it up again, or ask an administrator to reset it."
+msgstr ""
+
+#. translators: %d: number of unused recovery codes
+#: src/Admin/ProfileSection.php:96
+#, php-format
+msgid "%d recovery code left."
+msgid_plural "%d recovery codes left."
+msgstr[0] ""
+msgstr[1] ""
+
+#: src/Admin/ProfileSection.php:104
+msgid "Set up"
+msgstr ""
+
+#: src/Admin/ProfileSection.php:107
+#: src/Frontend/TwoFactorScreens.php:148
+#: templates/views/two-factor-setup.php:16
+msgid "Set up two-factor authentication"
+msgstr ""
+
+#: src/Admin/ProfileSection.php:109
+msgid "You need an authenticator app such as 1Password, Aegis or Google Authenticator."
+msgstr ""
+
+#: src/Admin/ProfileSection.php:114
+#: templates/views/recovery-codes.php:28
+#: build/admin.js:3
+msgid "Recovery codes"
+msgstr ""
+
+#: src/Admin/ProfileSection.php:117
+msgid "Create new recovery codes"
+msgstr ""
+
+#: src/Admin/ProfileSection.php:119
+msgid "Your old codes stop working."
+msgstr ""
+
+#: src/Admin/ProfileSection.php:123
+msgid "Turn off"
+msgstr ""
+
+#: src/Admin/ProfileSection.php:127
+msgid "Turn off two-factor authentication"
+msgstr ""
+
+#: src/Admin/ProfileSection.php:130
+msgid "Current password (required to turn it off)"
+msgstr ""
+
+#: src/Admin/ProfileSection.php:137
+msgid "Reset"
+msgstr ""
+
+#: src/Admin/ProfileSection.php:141
+msgid "Reset two-factor authentication for this user (e.g. lost phone)"
+msgstr ""
+
+#: src/Admin/ProfileSection.php:143
+msgid "The user can set it up again at the next login."
+msgstr ""
+
+#: src/Admin/ProfileSection.php:165
+msgid "Two-factor authentication could not be changed. Please try again."
+msgstr ""
+
+#: src/Admin/ProfileSection.php:173
+msgid "To turn off two-factor authentication, please enter your current password."
+msgstr ""
+
+#: src/Admin/ProfileSection.php:210
+msgid "Two-factor authentication is set up. Your recovery codes are saved."
+msgstr ""
+
+#: src/Admin/Skeleton.php:71
+msgid "Loading settings…"
+msgstr ""
+
+#: src/Admin/Skeleton.php:198
+#: build/admin.js:20
+msgid "Portier settings"
+msgstr ""
+
+#: src/Admin/Skeleton.php:279
+#: build/admin.js:7
+msgid "Choose how people can log in. Two-factor authentication applies to every method."
+msgstr ""
+
+#: src/Admin/SocialProfileSection.php:58
+msgid "Connected accounts"
+msgstr ""
+
+#: src/Admin/SocialProfileSection.php:61
+msgid "For security reasons, accounts with this role cannot log in with Google, LinkedIn or other social accounts."
+msgstr ""
+
+#: src/Admin/SocialProfileSection.php:72
+msgid "Connected"
+msgstr ""
+
+#. translators: %s: date
+#: src/Admin/SocialProfileSection.php:80
+#, php-format
+msgid "Since %s"
+msgstr ""
+
+#. translators: %s: provider name, e.g. Google
+#: src/Admin/SocialProfileSection.php:89
+#, php-format
+msgid "Disconnect %s"
+msgstr ""
+
+#. translators: %s: provider name, e.g. Google
+#: src/Admin/SocialProfileSection.php:96
+#, php-format
+msgid "Connect %s"
+msgstr ""
+
+#. translators: %s: provider name, e.g. Google
+#: src/Admin/SocialProfileSection.php:102
+#, php-format
+msgid "Afterwards you can log in with %s."
+msgstr ""
+
+#: src/Admin/SocialProfileSection.php:106
+msgid "Not connected"
+msgstr ""
+
+#: src/Admin/SocialProfileSection.php:152
+#: src/Frontend/Controller.php:445
+msgid "this provider"
+msgstr ""
+
+#. translators: %s: provider name, e.g. Google
+#: src/Admin/SocialProfileSection.php:155
+#, php-format
+msgid "%s is now connected. You can use it to log in."
+msgstr ""
+
+#. translators: %s: provider name, e.g. Google
+#: src/Admin/SocialProfileSection.php:160
+#: src/Frontend/Controller.php:465
+#, php-format
+msgid "This %s account is already connected to another account."
+msgstr ""
+
+#. translators: %s: provider name, e.g. Google
+#: src/Admin/SocialProfileSection.php:162
+#, php-format
+msgid "For security reasons this account cannot log in with %s."
+msgstr ""
+
+#. translators: %s: provider name, e.g. Google
+#: src/Admin/SocialProfileSection.php:164
+#, php-format
+msgid "Connecting %s was cancelled."
+msgstr ""
+
+#. translators: %s: provider name, e.g. Google
+#: src/Admin/SocialProfileSection.php:166
+#, php-format
+msgid "%s could not be connected. Please try again."
+msgstr ""
+
+#. translators: %s: person whose account was changed
+#: src/Audit/AuditLog.php:94
+#, php-format
+msgid "for %s"
+msgstr ""
+
+#. translators: 1: browser, 2: operating system, e.g. "Chrome on Windows"
+#. translators: 1: browser name, 2: operating system
+#: src/Audit/AuditLog.php:136
+#: src/Passkeys/PasskeyService.php:159
+#: templates/views/magic-confirm.php:21
+#, php-format
+msgid "%1$s on %2$s"
+msgstr ""
+
+#: src/Audit/AuditLog.php:156
+msgid "Login page"
+msgstr ""
+
+#: src/Audit/AuditLog.php:162
+#: src/Audit/AuditLog.php:168
+msgid "Profile"
+msgstr ""
+
+#: src/Audit/AuditLog.php:170
+msgid "Website"
+msgstr ""
+
+#: src/Audit/AuditSubscriber.php:87
+msgid "Registration allowed"
+msgstr ""
+
+#: src/Audit/AuditSubscriber.php:87
+msgid "Registration not allowed"
+msgstr ""
+
+#. translators: 1: old role, 2: new role
+#: src/Audit/AuditSubscriber.php:105
+#, php-format
+msgid "Role for new accounts: %1$s → %2$s"
+msgstr ""
+
+#. translators: %s: login method, e.g. "Passkey" or "password + 2FA code"
+#: src/Audit/AuditSubscriber.php:120
+#, php-format
+msgid "Logged in with %s"
+msgstr ""
+
+#: src/Audit/AuditSubscriber.php:130
+msgid "wrong login or password"
+msgstr ""
+
+#: src/Audit/AuditSubscriber.php:131
+msgid "empty field"
+msgstr ""
+
+#: src/Audit/AuditSubscriber.php:132
+msgid "paused after too many attempts"
+msgstr ""
+
+#: src/Audit/AuditSubscriber.php:133
+msgid "two-factor authentication required, login only on the login page"
+msgstr ""
+
+#: src/Audit/AuditSubscriber.php:134
+msgid "unknown reason"
+msgstr ""
+
+#. translators: 1: entered login name, 2: reason
+#: src/Audit/AuditSubscriber.php:140
+#, php-format
+msgid "Login failed for “%1$s” (%2$s)"
+msgstr ""
+
+#. translators: %s: reason
+#: src/Audit/AuditSubscriber.php:142
+#, php-format
+msgid "Login failed for an unknown account (%s)"
+msgstr ""
+
+#. translators: 1: minutes, 2: last entered login name
+#: src/Audit/AuditSubscriber.php:155
+#, php-format
+msgid "Logins paused for %1$d minutes after too many failed attempts (last login name: “%2$s”)"
+msgstr ""
+
+#. translators: %d: minutes
+#: src/Audit/AuditSubscriber.php:157
+#, php-format
+msgid "Logins paused for %d minutes after too many failed attempts (last attempt: unknown account)"
+msgstr ""
+
+#. translators: %d: minutes
+#: src/Audit/AuditSubscriber.php:166
+#, php-format
+msgid "Two-factor codes paused for %d minutes after too many wrong codes – the password is probably known"
+msgstr ""
+
+#: src/Audit/AuditSubscriber.php:173
+msgid "Logged out"
+msgstr ""
+
+#: src/Audit/AuditSubscriber.php:180
+msgid "Wrong recovery code"
+msgstr ""
+
+#: src/Audit/AuditSubscriber.php:180
+msgid "Wrong two-factor code"
+msgstr ""
+
+#. translators: %s: reason
+#: src/Audit/AuditSubscriber.php:189
+#, php-format
+msgid "Passkey login failed (%s)"
+msgstr ""
+
+#: src/Audit/AuditSubscriber.php:191
+msgid "request expired or used before"
+msgstr ""
+
+#: src/Audit/AuditSubscriber.php:192
+msgid "unknown passkey"
+msgstr ""
+
+#: src/Audit/AuditSubscriber.php:193
+msgid "device did not confirm the person"
+msgstr ""
+
+#: src/Audit/AuditSubscriber.php:194
+msgid "invalid signature"
+msgstr ""
+
+#: src/Audit/AuditSubscriber.php:195
+msgid "signed for another website – possibly phishing"
+msgstr ""
+
+#: src/Audit/AuditSubscriber.php:196
+msgid "signature counter went back – possibly a cloned key"
+msgstr ""
+
+#: src/Audit/AuditSubscriber.php:197
+msgid "too many attempts"
+msgstr ""
+
+#: src/Audit/AuditSubscriber.php:198
+msgid "account may not log in"
+msgstr ""
+
+#. translators: 1: provider, 2: reason code
+#: src/Audit/AuditSubscriber.php:210
+#, php-format
+msgid "Login with %1$s failed (%2$s)"
+msgstr ""
+
+#: src/Audit/AuditSubscriber.php:216
+msgid "Login link sent by email"
+msgstr ""
+
+#. translators: %s: login name
+#: src/Audit/AuditSubscriber.php:223
+#, php-format
+msgid "Password reset requested for “%s”"
+msgstr ""
+
+#: src/Audit/AuditSubscriber.php:229
+msgid "Password reset"
+msgstr ""
+
+#: src/Audit/AuditSubscriber.php:236
+msgid "Account created"
+msgstr ""
+
+#: src/Audit/AuditSubscriber.php:244
+msgid "Two-factor authentication set up"
+msgstr ""
+
+#: src/Audit/AuditSubscriber.php:249
+msgid "Two-factor authentication turned off"
+msgstr ""
+
+#: src/Audit/AuditSubscriber.php:254
+msgid "New recovery codes created"
+msgstr ""
+
+#. translators: %s: passkey name
+#: src/Audit/AuditSubscriber.php:260
+#, php-format
+msgid "Passkey “%s” added"
+msgstr ""
+
+#. translators: 1: old name, 2: new name
+#: src/Audit/AuditSubscriber.php:266
+#, php-format
+msgid "Passkey renamed: “%1$s” → “%2$s”"
+msgstr ""
+
+#. translators: %s: passkey name
+#: src/Audit/AuditSubscriber.php:272
+#, php-format
+msgid "Passkey “%s” deleted"
+msgstr ""
+
+#. translators: 1: provider, 2: e-mail address at the provider
+#: src/Audit/AuditSubscriber.php:282
+#, php-format
+msgid "%1$s account connected (%2$s)"
+msgstr ""
+
+#. translators: %s: provider
+#: src/Audit/AuditSubscriber.php:290
+#, php-format
+msgid "%s account disconnected"
+msgstr ""
+
+#: src/Audit/AuditSubscriber.php:346
+msgid "the WordPress login"
+msgstr ""
+
+#: src/Audit/AuditSubscriber.php:352
+msgid "password"
+msgstr ""
+
+#: src/Audit/AuditSubscriber.php:353
+msgid "login link"
+msgstr ""
+
+#: src/Audit/AuditSubscriber.php:354
+msgid "passkey"
+msgstr ""
+
+#: src/Audit/AuditSubscriber.php:355
+msgid "2FA code"
+msgstr ""
+
+#: src/Audit/AuditSubscriber.php:356
+msgid "recovery code"
+msgstr ""
+
+#: src/Audit/AuditSubscriber.php:357
+msgid "2FA set up during login"
+msgstr ""
+
+#: src/Audit/SettingsDiff.php:50
+msgid "XML-RPC switched off"
+msgstr ""
+
+#: src/Audit/SettingsDiff.php:50
+msgid "XML-RPC switched on"
+msgstr ""
+
+#. translators: %s: name of a setting, e.g. "Passkeys"
+#: src/Audit/SettingsDiff.php:53
+#, php-format
+msgid "%s enabled"
+msgstr ""
+
+#. translators: %s: name of a setting, e.g. "Passkeys"
+#: src/Audit/SettingsDiff.php:53
+#, php-format
+msgid "%s disabled"
+msgstr ""
+
+#. translators: 1: old length, 2: new length (characters)
+#: src/Audit/SettingsDiff.php:57
+#, php-format
+msgid "Custom CSS changed (%1$d → %2$d characters)"
+msgstr ""
+
+#. translators: 1: name of a setting, 2: old value, 3: new value
+#: src/Audit/SettingsDiff.php:60
+#, php-format
+msgid "%1$s: %2$s → %3$s"
+msgstr ""
+
+#. translators: %s: provider, e.g. Google
+#: src/Audit/SettingsDiff.php:89
+#, php-format
+msgid "Login with %s enabled"
+msgstr ""
+
+#. translators: %s: provider, e.g. Google
+#: src/Audit/SettingsDiff.php:89
+#, php-format
+msgid "Login with %s disabled"
+msgstr ""
+
+#. translators: %s: provider
+#: src/Audit/SettingsDiff.php:91
+#, php-format
+msgid "%s: client secret changed"
+msgstr ""
+
+#. translators: 1: provider, 2: old client ID, 3: new client ID
+#: src/Audit/SettingsDiff.php:93
+#, php-format
+msgid "%1$s: client ID %2$s → %3$s"
+msgstr ""
+
+#. translators: 1: provider, 2: old policy, 3: new policy
+#: src/Audit/SettingsDiff.php:95
+#, php-format
+msgid "%1$s: link accounts %2$s → %3$s"
+msgstr ""
+
+#. translators: %s: provider
+#: src/Audit/SettingsDiff.php:99
+#, php-format
+msgid "%s: new accounts allowed"
+msgstr ""
+
+#. translators: %s: provider
+#: src/Audit/SettingsDiff.php:101
+#, php-format
+msgid "%s: existing accounts only"
+msgstr ""
+
+#. translators: 1: provider, 2: setting key, 3: new value
+#: src/Audit/SettingsDiff.php:105
+#, php-format
+msgid "%1$s: %2$s changed to %3$s"
+msgstr ""
+
+#: src/Audit/SettingsDiff.php:116
+msgid "show 404"
+msgstr ""
+
+#: src/Audit/SettingsDiff.php:116
+msgid "redirect to the new address"
+msgstr ""
+
+#: src/Audit/SettingsDiff.php:117
+msgid "two steps"
+msgstr ""
+
+#: src/Audit/SettingsDiff.php:117
+msgid "one step"
+msgstr ""
+
+#: src/Audit/SettingsDiff.php:119
+#: src/Audit/SettingsDiff.php:231
+msgid "off"
+msgstr ""
+
+#: src/Audit/SettingsDiff.php:120
+msgid "required for roles"
+msgstr ""
+
+#: src/Audit/SettingsDiff.php:121
+msgid "optional"
+msgstr ""
+
+#: src/Audit/SettingsDiff.php:127
+msgid "light"
+msgstr ""
+
+#: src/Audit/SettingsDiff.php:128
+msgid "dark"
+msgstr ""
+
+#: src/Audit/SettingsDiff.php:129
+msgid "auto (system)"
+msgstr ""
+
+#: src/Audit/SettingsDiff.php:131
+#: src/Audit/SettingsDiff.php:133
+#: src/Audit/SettingsDiff.php:135
+msgid "template default"
+msgstr ""
+
+#: src/Audit/SettingsDiff.php:139
+#: src/Audit/SettingsDiff.php:217
+msgid "none"
+msgstr ""
+
+#: src/Audit/SettingsDiff.php:140
+msgid "direct connection (REMOTE_ADDR)"
+msgstr ""
+
+#: src/Audit/SettingsDiff.php:151
+msgid "Custom login"
+msgstr ""
+
+#: src/Audit/SettingsDiff.php:152
+#: build/admin.js:1
+msgid "Login address"
+msgstr ""
+
+#: src/Audit/SettingsDiff.php:153
+msgid "Calls of wp-login.php"
+msgstr ""
+
+#: src/Audit/SettingsDiff.php:154
+#: build/admin.js:7
+msgid "Login screen"
+msgstr ""
+
+#: src/Audit/SettingsDiff.php:155
+#: build/admin.js:3
+msgid "Minimum password length"
+msgstr ""
+
+#: src/Audit/SettingsDiff.php:156
+msgid "Privacy consent at registration"
+msgstr ""
+
+#: src/Audit/SettingsDiff.php:157
+msgid "Language switcher"
+msgstr ""
+
+#: src/Audit/SettingsDiff.php:158
+#: build/admin.js:4
+msgid "Imprint page"
+msgstr ""
+
+#: src/Audit/SettingsDiff.php:159
+msgid "Accessibility statement page"
+msgstr ""
+
+#: src/Audit/SettingsDiff.php:160
+msgid "Failed attempts until pause"
+msgstr ""
+
+#: src/Audit/SettingsDiff.php:161
+msgid "First pause (minutes)"
+msgstr ""
+
+#: src/Audit/SettingsDiff.php:162
+#: build/admin.js:2
+msgid "Failed attempts per account and hour"
+msgstr ""
+
+#: src/Audit/SettingsDiff.php:163
+msgid "Visitor IP address"
+msgstr ""
+
+#: src/Audit/SettingsDiff.php:165
+msgid "Two-factor authentication required for"
+msgstr ""
+
+#: src/Audit/SettingsDiff.php:166
+msgid "Trust device (days)"
+msgstr ""
+
+#: src/Audit/SettingsDiff.php:167
+#: build/admin.js:7
+msgid "Magic link"
+msgstr ""
+
+#: src/Audit/SettingsDiff.php:168
+msgid "Magic link valid for (minutes)"
+msgstr ""
+
+#: src/Audit/SettingsDiff.php:170
+#: build/admin.js:3
+msgid "Audit log"
+msgstr ""
+
+#: src/Audit/SettingsDiff.php:171
+msgid "Order of the methods below the form"
+msgstr ""
+
+#: src/Audit/SettingsDiff.php:172
+#: build/admin.js:9
+msgid "Social login blocked for"
+msgstr ""
+
+#: src/Audit/SettingsDiff.php:173
+#: build/admin.js:12
+#: build/admin.js:16
+msgid "Template"
+msgstr ""
+
+#: src/Audit/SettingsDiff.php:174
+#: build/admin.js:17
+msgid "Colour scheme"
+msgstr ""
+
+#: src/Audit/SettingsDiff.php:175
+#: build/admin.js:18
+msgid "Headline"
+msgstr ""
+
+#: src/Audit/SettingsDiff.php:176
+#: build/admin.js:18
+msgid "Text"
+msgstr ""
+
+#: src/Audit/SettingsDiff.php:177
+msgid "Primary colour"
+msgstr ""
+
+#: src/Audit/SettingsDiff.php:178
+msgid "Accent colour"
+msgstr ""
+
+#: src/Audit/SettingsDiff.php:179
+msgid "Background colour"
+msgstr ""
+
+#: src/Audit/SettingsDiff.php:180
+#: build/admin.js:13
+#: build/admin.js:14
+msgid "Corner radius"
+msgstr ""
+
+#: src/Audit/SettingsDiff.php:181
+#: build/admin.js:16
+msgid "Font"
+msgstr ""
+
+#: src/Audit/SettingsDiff.php:182
+#: build/admin.js:10
+msgid "Background image"
+msgstr ""
+
+#: src/Audit/SettingsDiff.php:183
+msgid "Background image for dark mode"
+msgstr ""
+
+#: src/Audit/SettingsDiff.php:184
+msgid "Own background image for dark mode"
+msgstr ""
+
+#: src/Audit/SettingsDiff.php:185
+msgid "Focus point horizontal (%)"
+msgstr ""
+
+#: src/Audit/SettingsDiff.php:186
+msgid "Focus point vertical (%)"
+msgstr ""
+
+#: src/Audit/SettingsDiff.php:187
+msgid "Overlay transparency (%)"
+msgstr ""
+
+#: src/Audit/SettingsDiff.php:188
+msgid "Background image on mobile devices"
+msgstr ""
+
+#: src/Audit/SettingsDiff.php:195
+msgid "nobody"
+msgstr ""
+
+#: src/Audit/SettingsDiff.php:204
+msgid "default"
+msgstr ""
+
+#: src/Audit/SettingsDiff.php:220
+msgid "unknown"
+msgstr ""
+
+#: src/Audit/SettingsDiff.php:225
+msgid "never"
+msgstr ""
+
+#: src/Audit/SettingsDiff.php:225
+msgid "verified email only"
+msgstr ""
+
+#: src/Audit/SettingsDiff.php:231
+msgid "on"
+msgstr ""
+
+#: src/Auth/LoginService.php:36
+#: src/Auth/MagicLinkService.php:46
+#: src/Auth/PasswordResetService.php:39
+#: src/Frontend/Controller.php:173
+msgid "Please enter your email address or username."
+msgstr ""
+
+#: src/Auth/LoginService.php:39
+msgid "Please enter your password."
+msgstr ""
+
+#: src/Auth/LoginService.php:72
+#: src/Frontend/Controller.php:97
+msgid "The email address/username or password is incorrect. Please check your input and try again."
+msgstr ""
+
+#: src/Auth/LoginService.php:79
+msgid "Login failed. Please try again."
+msgstr ""
+
+#. translators: %s: site name
+#: src/Auth/MagicLinkService.php:145
+#, php-format
+msgid "[%s] Your login link"
+msgstr ""
+
+#. translators: %s: user display name
+#: src/Auth/MagicLinkService.php:148
+#: src/Auth/RegistrationService.php:190
+#: src/OAuth/SocialAccounts.php:185
+#: src/Passkeys/PasskeyService.php:178
+#: src/TwoFactor/TwoFactorService.php:195
+#, php-format
+msgid "Hi %s,"
+msgstr ""
+
+#. translators: %s: site name
+#: src/Auth/MagicLinkService.php:150
+#, php-format
+msgid "here is your login link for %s:"
+msgstr ""
+
+#. translators: %d: lifetime of the link in minutes
+#: src/Auth/MagicLinkService.php:154
+#, php-format
+msgid "The link works once and expires in %d minute."
+msgid_plural "The link works once and expires in %d minutes."
+msgstr[0] ""
+msgstr[1] ""
+
+#: src/Auth/MagicLinkService.php:157
+msgid "If you did not request this link, you can ignore this email – nobody can log in without it."
+msgstr ""
+
+#: src/Auth/PasswordResetService.php:95
+msgid "Please enter a new password."
+msgstr ""
+
+#. translators: %d: minimum number of characters
+#: src/Auth/PasswordResetService.php:101
+#, php-format
+msgid "Please use at least %d character."
+msgid_plural "Please use at least %d characters."
+msgstr[0] ""
+msgstr[1] ""
+
+#: src/Auth/PasswordResetService.php:107
+msgid "The passwords do not match."
+msgstr ""
+
+#: src/Auth/RegistrationService.php:49
+#: src/Frontend/Controller.php:430
+msgid "Registration is currently closed."
+msgstr ""
+
+#: src/Auth/RegistrationService.php:54
+msgid "Please enter a valid email address, e.g. name@example.com."
+msgstr ""
+
+#: src/Auth/RegistrationService.php:57
+msgid "Please agree to the privacy policy to create an account."
+msgstr ""
+
+#: src/Auth/RegistrationService.php:60
+msgid "Please use at most 100 characters for your name."
+msgstr ""
+
+#. translators: %s: site name
+#: src/Auth/RegistrationService.php:184
+#, php-format
+msgid "[%s] You already have an account"
+msgstr ""
+
+#. translators: %s: site name
+#: src/Auth/RegistrationService.php:193
+#, php-format
+msgid "someone – hopefully you – just tried to create an account on %s with this email address. You already have an account, so nothing was changed."
+msgstr ""
+
+#. translators: %s: login URL
+#: src/Auth/RegistrationService.php:197
+#, php-format
+msgid "Log in: %s"
+msgstr ""
+
+#. translators: %s: lost password URL
+#: src/Auth/RegistrationService.php:200
+#, php-format
+msgid "Forgot your password? %s"
+msgstr ""
+
+#: src/Auth/RegistrationService.php:201
+msgid "If this wasn't you, you can ignore this email."
+msgstr ""
+
+#: src/Design/Templates.php:27
+msgid "Glass card on an aurora gradient, light and dark."
+msgstr ""
+
+#: src/Design/Templates.php:32
+msgid "Minimal, lots of white space, clear lines."
+msgstr ""
+
+#: src/Design/Templates.php:37
+msgid "Split screen with a brand area."
+msgstr ""
+
+#: src/Design/Templates.php:42
+msgid "Dark, grid, neon accent."
+msgstr ""
+
+#: src/Design/Templates.php:47
+msgid "Editorial, serif, warm paper."
+msgstr ""
+
+#: src/Design/Templates.php:52
+msgid "Neo-brutalism with strong outlines."
+msgstr ""
+
+#: src/Design/Templates.php:57
+msgid "Soft, pastel, large radii."
+msgstr ""
+
+#: src/Design/Templates.php:62
+msgid "Matter-of-fact and structured, with a header bar."
+msgstr ""
+
+#: src/Design/Templates.php:96
+msgid "Simple. Secure. In."
+msgstr ""
+
+#: src/Design/Templates.php:97
+msgid "No clutter, no noise – just what you need to log in."
+msgstr ""
+
+#. translators: %s: site name
+#: src/Design/Templates.php:101
+#, php-format
+msgid "Welcome to %s"
+msgstr ""
+
+#: src/Design/Templates.php:105
+msgid "Welcome back."
+msgstr ""
+
+#. translators: %s: site name
+#: src/Design/Templates.php:107
+#, php-format
+msgid "Log in to continue with %s."
+msgstr ""
+
+#: src/Frontend/Controller.php:93
+msgid "name@example.com"
+msgstr ""
+
+#: src/Frontend/Controller.php:101
+#: src/Frontend/Controller.php:184
+#: templates/views/lost-password.php:17
+msgid "Forgot your password?"
+msgstr ""
+
+#: src/Frontend/Controller.php:201
+msgid "This password reset link is no longer valid. Please request a new one."
+msgstr ""
+
+#: src/Frontend/Controller.php:213
+#: templates/views/check-email.php:30
+msgid "Check your inbox"
+msgstr ""
+
+#: src/Frontend/Controller.php:237
+#: templates/views/reset-invalid.php:16
+msgid "This link is no longer valid"
+msgstr ""
+
+#: src/Frontend/Controller.php:256
+#: templates/views/reset-password.php:18
+msgid "Set a new password"
+msgstr ""
+
+#: src/Frontend/Controller.php:266
+#: templates/views/register-closed.php:16
+msgid "Registration is closed"
+msgstr ""
+
+#: src/Frontend/Controller.php:289
+msgid "The form has expired. Please submit it again."
+msgstr ""
+
+#: src/Frontend/Controller.php:323
+#: src/Frontend/Controller.php:365
+#: templates/views/login-password.php:71
+#: templates/views/login.php:59
+#: templates/views/recovery.php:34
+#: templates/views/register.php:79
+msgid "Log in"
+msgstr ""
+
+#: src/Frontend/Controller.php:365
+msgid "Enter your password"
+msgstr ""
+
+#: src/Frontend/Controller.php:383
+#: templates/views/logged-in.php:20
+msgid "You are already logged in"
+msgstr ""
+
+#: src/Frontend/Controller.php:392
+#: templates/views/register.php:17
+msgid "Create your account"
+msgstr ""
+
+#: src/Frontend/Controller.php:410
+msgid "Your password has been changed. You can now log in with it."
+msgstr ""
+
+#: src/Frontend/Controller.php:411
+msgid "Your login took too long and has expired for your security. Please log in again."
+msgstr ""
+
+#: src/Frontend/Controller.php:412
+msgid "Too many wrong codes. For your security, please log in again."
+msgstr ""
+
+#: src/Frontend/Controller.php:421
+msgid "You are now logged out. See you soon!"
+msgstr ""
+
+#: src/Frontend/Controller.php:427
+msgid "Please log in again to continue."
+msgstr ""
+
+#: src/Frontend/Controller.php:443
+msgid "Too many login attempts. Please wait a few minutes and try again."
+msgstr ""
+
+#. translators: %s: provider name, e.g. Google
+#: src/Frontend/Controller.php:448
+#, php-format
+msgid "The login with %s was cancelled. You can choose another way to log in."
+msgstr ""
+
+#. translators: %s: provider name, e.g. Google
+#: src/Frontend/Controller.php:450
+#, php-format
+msgid "The login with %s took too long or was started in another browser. Please try again."
+msgstr ""
+
+#. translators: %s: provider name, e.g. Google
+#: src/Frontend/Controller.php:452
+#, php-format
+msgid "%s could not be reached. Please try again later or log in another way."
+msgstr ""
+
+#. translators: %s: provider name, e.g. Google
+#: src/Frontend/Controller.php:454
+#, php-format
+msgid "The answer from %s could not be verified. Please try again."
+msgstr ""
+
+#. translators: %s: provider name, e.g. Google
+#: src/Frontend/Controller.php:456
+#, php-format
+msgid "%s did not confirm an email address. Please verify your email address there or log in another way."
+msgstr ""
+
+#. translators: %s: provider name, e.g. Google
+#: src/Frontend/Controller.php:458
+#, php-format
+msgid "There is no account here for the email address of your %s account yet."
+msgstr ""
+
+#. translators: %s: provider name, e.g. Google
+#: src/Frontend/Controller.php:462
+#, php-format
+msgid "An account with this email address already exists. Log in with your password and connect %s in your profile afterwards."
+msgstr ""
+
+#. translators: %s: provider name, e.g. Google
+#: src/Frontend/Controller.php:467
+#, php-format
+msgid "For security reasons this account cannot log in with %s. Please log in with your password."
+msgstr ""
+
+#. translators: %s: provider name, e.g. Google
+#: src/Frontend/Controller.php:469
+#, php-format
+msgid "The login with %s is not available at the moment."
+msgstr ""
+
+#: src/Frontend/MagicLinkScreens.php:50
+#: templates/views/magic-request.php:16
+msgid "Log in with a link"
+msgstr ""
+
+#: src/Frontend/MagicLinkScreens.php:106
+#: templates/views/magic-confirm.php:27
+msgid "Confirm your login"
+msgstr ""
+
+#: src/Frontend/MagicLinkScreens.php:116
+#: templates/views/magic-invalid.php:16
+msgid "This login link is no longer valid"
+msgstr ""
+
+#: src/Frontend/PasskeyScreens.php:67
+#: templates/partials/social.php:46
+#: templates/views/passkey.php:40
+#: build/admin.js:8
+msgid "Log in with a passkey"
+msgstr ""
+
+#: src/Frontend/PasskeyScreens.php:168
+#: src/Passkeys/PasskeyRestController.php:198
+msgid "The request has expired. Please try again."
+msgstr ""
+
+#: src/Frontend/PasskeyScreens.php:169
+msgid "This passkey is not linked to an account here. Log in with your password and add the passkey in your profile."
+msgstr ""
+
+#: src/Frontend/PasskeyScreens.php:170
+#: src/Passkeys/PasskeyRestController.php:199
+msgid "Your device did not confirm it is you. Please try again."
+msgstr ""
+
+#: src/Frontend/PasskeyScreens.php:171
+#: src/Passkeys/PasskeyRestController.php:192
+msgid "Passkeys are not available on this site."
+msgstr ""
+
+#: src/Frontend/PasskeyScreens.php:172
+msgid "Too many attempts. Please wait a few minutes and try again."
+msgstr ""
+
+#: src/Frontend/PasskeyScreens.php:173
+msgid "This account cannot log in at the moment."
+msgstr ""
+
+#: src/Frontend/PasskeyScreens.php:174
+#: templates/views/passkey.php:29
+msgid "The passkey could not be checked. Please try again or choose another method."
+msgstr ""
+
+#: src/Frontend/Responder.php:143
+msgid "Your browser blocks cookies. Please allow cookies for this site to log in."
+msgstr ""
+
+#: src/Frontend/Responder.php:146
+msgid "For your security the form has expired. Please submit it again."
+msgstr ""
+
+#: src/Frontend/Responder.php:244
+msgid "Privacy"
+msgstr ""
+
+#: src/Frontend/Responder.php:246
+msgid "Imprint"
+msgstr ""
+
+#: src/Frontend/Responder.php:246
+msgid "Accessibility"
+msgstr ""
+
+#: src/Frontend/TwoFactorScreens.php:104
+#: templates/views/recovery.php:16
+#: templates/views/two-factor.php:50
+msgid "Use a recovery code"
+msgstr ""
+
+#: src/Frontend/TwoFactorScreens.php:144
+msgid "This code is not correct. Please check the time on your phone and enter the current code."
+msgstr ""
+
+#: src/Frontend/TwoFactorScreens.php:194
+msgid "Please confirm that you have saved your recovery codes."
+msgstr ""
+
+#: src/Frontend/TwoFactorScreens.php:203
+#: templates/views/recovery-codes.php:18
+msgid "Save your recovery codes"
+msgstr ""
+
+#: src/Frontend/TwoFactorScreens.php:253
+msgid "Your previous code is still being checked. Please try again in a moment."
+msgstr ""
+
+#: src/Frontend/TwoFactorScreens.php:277
+msgid "Your two-factor authentication can no longer be read because the site’s security keys have changed. Please ask an administrator to reset it for your account."
+msgstr ""
+
+#. translators: %d: remaining attempts
+#: src/Frontend/TwoFactorScreens.php:313
+#, php-format
+msgid "This code is not correct. %d attempt left."
+msgid_plural "This code is not correct. %d attempts left."
+msgstr[0] ""
+msgstr[1] ""
+
+#: src/Lifecycle.php:20
+msgid "Portier activated"
+msgstr ""
+
+#: src/Lifecycle.php:25
+msgid "Portier deactivated"
+msgstr ""
+
+#. translators: 1: site name, 2: provider name, e.g. Google
+#: src/OAuth/SocialAccounts.php:182
+#, php-format
+msgid "[%1$s] %2$s account connected"
+msgstr ""
+
+#. translators: 1: provider name, e.g. Google, 2: site name
+#: src/OAuth/SocialAccounts.php:188
+#, php-format
+msgid "a %1$s account was connected to your account on %2$s. From now on it can be used to log in."
+msgstr ""
+
+#: src/OAuth/SocialAccounts.php:192
+msgid "If this was not you, disconnect it in your profile right away and change your password:"
+msgstr ""
+
+#: src/Passkeys/CredentialStore.php:191
+msgid "Passkey"
+msgstr ""
+
+#: src/Passkeys/PasskeyRestController.php:136
+#: src/Passkeys/PasskeyRestController.php:145
+msgid "This passkey does not exist (any more)."
+msgstr ""
+
+#: src/Passkeys/PasskeyRestController.php:184
+msgid "For your security, please log in again before adding a passkey."
+msgstr ""
+
+#. translators: %d: maximum number of passkeys
+#: src/Passkeys/PasskeyRestController.php:195
+#, php-format
+msgid "You can add up to %d passkeys. Delete one you no longer use first."
+msgstr ""
+
+#: src/Passkeys/PasskeyRestController.php:203
+#: build/profile.js:7
+msgid "The passkey could not be added. Please try again."
+msgstr ""
+
+#. translators: %s: site name
+#: src/Passkeys/PasskeyService.php:175
+#, php-format
+msgid "[%s] New passkey added"
+msgstr ""
+
+#. translators: 1: passkey name, 2: site name
+#: src/Passkeys/PasskeyService.php:180
+#, php-format
+msgid "a new passkey (\"%1$s\") was added to your account on %2$s. From now on it can be used to log in."
+msgstr ""
+
+#: src/Passkeys/PasskeyService.php:181
+msgid "If this was not you, delete the passkey in your profile right away and change your password:"
+msgstr ""
+
+#: src/Plugin.php:182
+msgid "This preview has expired. Please reload the settings page."
+msgstr ""
+
+#. translators: 1: required PHP version, 2: required WordPress version
+#: src/Requirements.php:40
+#, php-format
+msgid "Portier needs PHP %1$s and WordPress %2$s or newer. The custom login is inactive; the default login keeps working."
+msgstr ""
+
+#: src/Routing/CoreLoginGuard.php:89
+msgid "Page not found."
+msgstr ""
+
+#. translators: %s: human readable duration, e.g. "5 mins"
+#: src/Security/LoginThrottle.php:99
+#, php-format
+msgid "Too many failed attempts. For your security, please wait %s and try again."
+msgstr ""
+
+#: src/Settings/RestController.php:76
+msgid "Unknown provider."
+msgstr ""
+
+#. translators: %s: provider name
+#: src/Settings/RestController.php:91
+#, php-format
+msgid "%s can be reached."
+msgstr ""
+
+#. translators: %s: provider name
+#: src/Settings/RestController.php:97
+#, php-format
+msgid "%s cannot be reached. Check the server’s internet connection or try again later."
+msgstr ""
+
+#: src/Settings/RestController.php:104
+msgid "Enter client ID and secret first."
+msgstr ""
+
+#: src/Settings/RestController.php:112
+msgid "Client ID and secret were accepted."
+msgstr ""
+
+#. translators: %s: provider name
+#: src/Settings/RestController.php:115
+#, php-format
+msgid "%s does not accept this client ID or secret. Please copy both again from the developer console."
+msgstr ""
+
+#. translators: %s: provider name
+#: src/Settings/RestController.php:120
+#, php-format
+msgid "The answer from %s was not clear. Please try a login yourself."
+msgstr ""
+
+#: src/Settings/RestController.php:125
+msgid "The redirect URI is checked by the provider on the first real login."
+msgstr ""
+
+#: src/Settings/RestController.php:159
+#: src/Settings/RestController.php:164
+#: src/Settings/RestController.php:322
+msgid "This role does not exist."
+msgstr ""
+
+#: src/Settings/RestController.php:161
+msgid "Please choose at least one role that requires two-factor authentication."
+msgstr ""
+
+#: src/Settings/RestController.php:174
+msgid "Please choose an image from the media library."
+msgstr ""
+
+#: src/Settings/RestController.php:179
+msgid "On this network only network administrators can change this setting."
+msgstr ""
+
+#: src/Settings/RestController.php:185
+#: build/admin.js:18
+msgid "Only administrators who may add unfiltered HTML can change custom CSS."
+msgstr ""
+
+#: src/Settings/RestController.php:188
+msgid "Some settings are invalid."
+msgstr ""
+
+#: src/Settings/RestController.php:303
+msgid "Please enter the client ID."
+msgstr ""
+
+#: src/Settings/RestController.php:306
+msgid "Please enter the client secret."
+msgstr ""
+
+#: src/Settings/RestController.php:325
+msgid "For security reasons new accounts cannot become administrators automatically."
+msgstr ""
+
+#: src/Settings/Settings.php:408
+#: build/admin.js:2
+msgid "Use 2–50 lowercase letters, digits or hyphens (no hyphen at the start or end)."
+msgstr ""
+
+#: src/Settings/Settings.php:409
+#: build/admin.js:2
+msgid "This address is reserved by WordPress. Please choose another one."
+msgstr ""
+
+#: src/Settings/Settings.php:410
+msgid "Please enter a colour as a hex code, e.g. #6230e0."
+msgstr ""
+
+#. translators: 1: minimum value, 2: maximum value
+#: src/Settings/Settings.php:413
+#, php-format
+msgid "Please enter a whole number between %1$d and %2$d."
+msgstr ""
+
+#: src/Settings/Settings.php:417
+msgid "This value is invalid."
+msgstr ""
+
+#. translators: %s: URL of the Portier login page
+#: src/TwoFactor/TwoFactorGate.php:83
+#, php-format
+msgid "This account is protected with two-factor authentication. Please log in at %s."
+msgstr ""
+
+#. translators: %s: site name
+#: src/TwoFactor/TwoFactorService.php:192
+#, php-format
+msgid "[%s] Wrong two-factor codes for your account"
+msgstr ""
+
+#. translators: %s: site name
+#: src/TwoFactor/TwoFactorService.php:198
+#, php-format
+msgid "someone entered several wrong two-factor codes for your account on %s. To get that far, they needed your password."
+msgstr ""
+
+#. translators: %s: human readable duration, e.g. "15 mins"
+#: src/TwoFactor/TwoFactorService.php:203
+#, php-format
+msgid "For your security, codes are not accepted for %s. If this was not you, change your password right away:"
+msgstr ""
+
+#: templates/layout.php:37
+msgid "Skip to the form"
+msgstr ""
+
+#: templates/layout.php:54
+msgid "Back"
+msgstr ""
+
+#: templates/layout.php:66
+msgid "(go to home page)"
+msgstr ""
+
+#. translators: %s: site name
+#: templates/layout.php:79
+#, php-format
+msgid "About %s"
+msgstr ""
+
+#: templates/layout.php:101
+msgid "Legal information"
+msgstr ""
+
+#: templates/partials/error-summary.php:26
+msgid "Please check your input"
+msgstr ""
+
+#: templates/partials/field.php:42
+msgid "(optional)"
+msgstr ""
+
+#: templates/partials/field.php:83
+#: templates/partials/field.php:89
+msgid "Show password"
+msgstr ""
+
+#: templates/partials/field.php:84
+msgid "Hide password"
+msgstr ""
+
+#: templates/partials/field.php:99
+msgid "Caps Lock is on."
+msgstr ""
+
+#. translators: %s: name of the current language
+#: templates/partials/language-switcher.php:30
+#, php-format
+msgid "Language: %s. Change language"
+msgstr ""
+
+#: templates/partials/login-more.php:19
+#: templates/views/login-password.php:79
+msgid "Send me a login link instead"
+msgstr ""
+
+#: templates/partials/login-more.php:28
+msgid "New here?"
+msgstr ""
+
+#: templates/partials/login-more.php:29
+msgid "Create an account"
+msgstr ""
+
+#: templates/partials/social.php:39
+msgid "or"
+msgstr ""
+
+#. translators: %s: provider name, e.g. Google
+#: templates/partials/social.php:58
+#: build/admin.js:9
+#, php-format,js-format
+msgid "Continue with %s"
+msgstr ""
+
+#: templates/views/check-email.php:17
+msgid "We have sent you an email with a link to set your password and finish creating your account."
+msgstr ""
+
+#: templates/views/check-email.php:18
+msgid "If an account exists for the details you entered, we have sent an email with a login link."
+msgstr ""
+
+#: templates/views/check-email.php:19
+msgid "If an account exists for the details you entered, we have sent an email with a link to set a new password."
+msgstr ""
+
+#. translators: %d: lifetime of the login link in minutes
+#: templates/views/check-email.php:24
+#, php-format
+msgid "The link is valid for %d minute and works once."
+msgid_plural "The link is valid for %d minutes and works once."
+msgstr[0] ""
+msgstr[1] ""
+
+#: templates/views/check-email.php:27
+msgid "The link is valid for 24 hours."
+msgstr ""
+
+#: templates/views/check-email.php:38
+msgid "No email? Please check your spam folder or try again in a few minutes."
+msgstr ""
+
+#: templates/views/check-email.php:45
+#: templates/views/lost-password.php:47
+#: templates/views/reset-invalid.php:31
+msgid "Back to login"
+msgstr ""
+
+#. translators: %s: display name of the current user
+#: templates/views/logged-in.php:22
+#, php-format
+msgid "You are logged in as %s."
+msgstr ""
+
+#: templates/views/logged-in.php:29
+#: templates/views/login-identify.php:41
+msgid "Continue"
+msgstr ""
+
+#: templates/views/logged-in.php:34
+msgid "Log out"
+msgstr ""
+
+#: templates/views/login-identify.php:17
+#: templates/views/login.php:15
+msgid "Welcome back"
+msgstr ""
+
+#. translators: %s: site name
+#: templates/views/login-identify.php:17
+#: templates/views/login.php:15
+#, php-format
+msgid "Log in to continue to %s."
+msgstr ""
+
+#: templates/views/login-identify.php:20
+#: templates/views/login-password.php:28
+#: templates/views/login.php:18
+msgid "Login failed"
+msgstr ""
+
+#: templates/views/login-identify.php:31
+#: templates/views/login.php:29
+#: templates/views/lost-password.php:28
+#: templates/views/magic-request.php:30
+msgid "Email address or username"
+msgstr ""
+
+#: templates/views/login-identify.php:41
+#: templates/views/recovery-codes.php:58
+msgid "One moment…"
+msgstr ""
+
+#: templates/views/login-password.php:25
+msgid "Nice to have you back."
+msgstr ""
+
+#: templates/views/login-password.php:33
+msgid "Logging in as"
+msgstr ""
+
+#: templates/views/login-password.php:37
+msgid "Change"
+msgstr ""
+
+#: templates/views/login-password.php:38
+msgid "email address or username"
+msgstr ""
+
+#: templates/views/login-password.php:52
+#: templates/views/login.php:41
+#: build/admin.js:9
+msgid "Password"
+msgstr ""
+
+#: templates/views/login-password.php:60
+#: templates/views/login.php:48
+msgid "Forgot password?"
+msgstr ""
+
+#: templates/views/login-password.php:64
+#: templates/views/login.php:52
+#: templates/views/magic-confirm.php:45
+msgid "Keep me logged in"
+msgstr ""
+
+#: templates/views/login-password.php:71
+#: templates/views/login.php:59
+#: templates/views/magic-confirm.php:46
+#: templates/views/recovery.php:34
+msgid "Logging in…"
+msgstr ""
+
+#: templates/views/lost-password.php:18
+msgid "No problem. Enter your email address or username and we will send you a link to set a new password."
+msgstr ""
+
+#: templates/views/lost-password.php:40
+msgid "Send reset link"
+msgstr ""
+
+#: templates/views/lost-password.php:40
+#: templates/views/magic-request.php:38
+msgid "Sending…"
+msgstr ""
+
+#: templates/views/magic-confirm.php:22
+msgid "Browser"
+msgstr ""
+
+#: templates/views/magic-confirm.php:23
+msgid "this device"
+msgstr ""
+
+#. translators: %s: email address of the account
+#: templates/views/magic-confirm.php:29
+#, php-format
+msgid "You are about to log in as %s."
+msgstr ""
+
+#: templates/views/magic-confirm.php:38
+msgid "This device will be logged in."
+msgstr ""
+
+#: templates/views/magic-confirm.php:46
+msgid "Log in now"
+msgstr ""
+
+#: templates/views/magic-confirm.php:50
+msgid "Not you? Simply close this page – nothing happens without pressing the button."
+msgstr ""
+
+#: templates/views/magic-invalid.php:18
+msgid "The link has expired. For your security, login links are only valid for a few minutes."
+msgstr ""
+
+#: templates/views/magic-invalid.php:19
+msgid "Login links work only once, and only the newest link is valid."
+msgstr ""
+
+#: templates/views/magic-invalid.php:27
+#: templates/views/reset-invalid.php:24
+msgid "Request a new link"
+msgstr ""
+
+#: templates/views/magic-invalid.php:32
+msgid "Log in with password"
+msgstr ""
+
+#: templates/views/magic-request.php:17
+msgid "We will email you a link that logs you in – no password needed."
+msgstr ""
+
+#: templates/views/magic-request.php:38
+msgid "Send login link"
+msgstr ""
+
+#: templates/views/magic-request.php:45
+msgid "Log in with password instead"
+msgstr ""
+
+#: templates/views/passkey.php:24
+#: build/profile.js:7
+msgid "Waiting for your device…"
+msgstr ""
+
+#: templates/views/passkey.php:25
+#: build/admin.js:14
+msgid "Checking…"
+msgstr ""
+
+#: templates/views/passkey.php:26
+msgid "Logged in. One moment…"
+msgstr ""
+
+#: templates/views/passkey.php:27
+msgid "Cancelled. You can try again or choose another method."
+msgstr ""
+
+#: templates/views/passkey.php:28
+msgid "This browser does not support passkeys. Please choose another method."
+msgstr ""
+
+#: templates/views/passkey.php:41
+msgid "Confirm with Face ID, Touch ID, Windows Hello or your security key."
+msgstr ""
+
+#: templates/views/passkey.php:48
+msgid "Passkeys need JavaScript. Please enable it or choose another method."
+msgstr ""
+
+#: templates/views/passkey.php:55
+msgid "Try again"
+msgstr ""
+
+#: templates/views/passkey.php:58
+#: build/profile.js:5
+msgid "Cancel"
+msgstr ""
+
+#: templates/views/passkey.php:64
+msgid "Choose another method"
+msgstr ""
+
+#: templates/views/recovery-codes.php:19
+msgid "With these codes you can log in even without your phone. Each code works once. Keep them in a safe place, e.g. your password manager."
+msgstr ""
+
+#: templates/views/recovery-codes.php:26
+msgid "Step 2 of 2"
+msgstr ""
+
+#: templates/views/recovery-codes.php:36
+msgid "Codes copied."
+msgstr ""
+
+#: templates/views/recovery-codes.php:37
+#: build/admin.js:4
+msgid "Copy"
+msgstr ""
+
+#: templates/views/recovery-codes.php:40
+msgid "Download"
+msgstr ""
+
+#: templates/views/recovery-codes.php:43
+msgid "Print"
+msgstr ""
+
+#: templates/views/recovery-codes.php:52
+msgid "I have saved my recovery codes in a safe place."
+msgstr ""
+
+#: templates/views/recovery-codes.php:57
+msgid "Continue to my account"
+msgstr ""
+
+#: templates/views/recovery-codes.php:57
+msgid "Done"
+msgstr ""
+
+#: templates/views/recovery.php:17
+msgid "No access to your authenticator app? Enter one of the recovery codes you saved when setting up two-factor authentication."
+msgstr ""
+
+#: templates/views/recovery.php:26
+msgid "Recovery code"
+msgstr ""
+
+#: templates/views/recovery.php:31
+msgid "Each code works only once. Hyphens are optional."
+msgstr ""
+
+#: templates/views/recovery.php:41
+msgid "Back to the authenticator code"
+msgstr ""
+
+#: templates/views/register-closed.php:17
+msgid "New accounts cannot be created at the moment. If you already have an account, you can log in."
+msgstr ""
+
+#: templates/views/register-closed.php:23
+msgid "Go to login"
+msgstr ""
+
+#: templates/views/register.php:18
+msgid "We will email you a link to set your password – that is all it takes."
+msgstr ""
+
+#: templates/views/register.php:28
+msgid "Leave this field empty"
+msgstr ""
+
+#: templates/views/register.php:35
+msgid "Email address"
+msgstr ""
+
+#: templates/views/register.php:45
+msgid "Your name"
+msgstr ""
+
+#: templates/views/register.php:58
+msgid "privacy policy"
+msgstr ""
+
+#: templates/views/register.php:59
+#: build/admin.js:5
+#: build/admin.js:20
+msgid "(opens in a new tab)"
+msgstr ""
+
+#. translators: %s: link to the privacy policy
+#: templates/views/register.php:64
+#, php-format
+msgid "I agree to the processing of my data as described in the %s."
+msgstr ""
+
+#: templates/views/register.php:73
+msgid "Create account"
+msgstr ""
+
+#: templates/views/register.php:73
+msgid "Creating account…"
+msgstr ""
+
+#: templates/views/register.php:78
+msgid "Already have an account?"
+msgstr ""
+
+#: templates/views/reset-invalid.php:17
+msgid "Password reset links work only once and expire after 24 hours. Simply request a new one."
+msgstr ""
+
+#: templates/views/reset-password.php:19
+msgid "Choose a strong password that you do not use anywhere else."
+msgstr ""
+
+#: templates/views/reset-password.php:32
+msgid "New password"
+msgstr ""
+
+#. translators: %d: minimum number of characters
+#: templates/views/reset-password.php:37
+#, php-format
+msgid "At least %d character. A short sentence is easy to remember and hard to guess."
+msgid_plural "At least %d characters. A short sentence is easy to remember and hard to guess."
+msgstr[0] ""
+msgstr[1] ""
+
+#: templates/views/reset-password.php:42
+msgid "Repeat new password"
+msgstr ""
+
+#: templates/views/reset-password.php:52
+msgid "Save password"
+msgstr ""
+
+#: templates/views/reset-password.php:52
+#: build/admin.js:20
+msgid "Saving…"
+msgstr ""
+
+#: templates/views/two-factor-setup.php:18
+msgid "Your account needs a second factor. Scan the QR code with an authenticator app such as 1Password, Aegis or Google Authenticator."
+msgstr ""
+
+#: templates/views/two-factor-setup.php:19
+msgid "Scan the QR code with an authenticator app such as 1Password, Aegis or Google Authenticator."
+msgstr ""
+
+#: templates/views/two-factor-setup.php:24
+msgid "Step 1 of 2"
+msgstr ""
+
+#: templates/views/two-factor-setup.php:29
+msgid "QR code for your authenticator app. The same key is shown as text next to it."
+msgstr ""
+
+#: templates/views/two-factor-setup.php:31
+msgid "Can’t scan? Enter this key manually:"
+msgstr ""
+
+#: templates/views/two-factor-setup.php:34
+msgid "Key copied."
+msgstr ""
+
+#: templates/views/two-factor-setup.php:36
+msgid "Copy key"
+msgstr ""
+
+#: templates/views/two-factor-setup.php:46
+msgid "Code from the app"
+msgstr ""
+
+#: templates/views/two-factor-setup.php:47
+msgid "Enter the 6-digit code the app shows after adding the account."
+msgstr ""
+
+#: templates/views/two-factor-setup.php:50
+msgid "Activate"
+msgstr ""
+
+#: templates/views/two-factor-setup.php:50
+msgid "Activating…"
+msgstr ""
+
+#: templates/views/two-factor.php:15
+msgid "Enter the 6-digit code from your authenticator app."
+msgstr ""
+
+#: templates/views/two-factor.php:25
+msgid "Verification code"
+msgstr ""
+
+#: templates/views/two-factor.php:26
+msgid "The code changes every 30 seconds."
+msgstr ""
+
+#. translators: %d: number of days
+#: templates/views/two-factor.php:33
+#, php-format
+msgid "Trust this device for %d day"
+msgid_plural "Trust this device for %d days"
+msgstr[0] ""
+msgstr[1] ""
+
+#: templates/views/two-factor.php:36
+msgid "Verify"
+msgstr ""
+
+#: templates/views/two-factor.php:36
+msgid "Verifying…"
+msgstr ""
+
+#: templates/views/two-factor.php:44
+msgid "Use a passkey instead"
+msgstr ""
+
+#: templates/views/two-factor.php:49
+msgid "No access to your app?"
+msgstr ""
+
+#: build/admin.js:1
+#: build/admin.js:4
+msgid "Copied to the clipboard."
+msgstr ""
+
+#: build/admin.js:1
+#: build/admin.js:4
+msgid "Copying failed. Please select the text and copy it manually."
+msgstr ""
+
+#: build/admin.js:1
+msgid "Copy code"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Your own URL for the login. Not a replacement for real security – but it reduces bot noise."
+msgstr ""
+
+#: build/admin.js:1
+msgid "URL"
+msgstr ""
+
+#. translators: %s: login URL
+#: build/admin.js:2
+#, js-format
+msgid "Your login page: %s"
+msgstr ""
+
+#: build/admin.js:2
+msgid "Requests to wp-login.php"
+msgstr ""
+
+#: build/admin.js:2
+msgid "Redirect to the new address"
+msgstr ""
+
+#: build/admin.js:2
+msgid "Log out, password-protected posts and privacy requests keep working."
+msgstr ""
+
+#: build/admin.js:2
+msgid "Show 404"
+msgstr ""
+
+#: build/admin.js:2
+msgid "For sites without public login widgets: forms that post to wp-login.php stop working."
+msgstr ""
+
+#: build/admin.js:2
+msgid "Emergency access"
+msgstr ""
+
+#: build/admin.js:2
+msgid "If you lock yourself out: add this line to wp-config.php and the default login applies again."
+msgstr ""
+
+#: build/admin.js:2
+msgid "Brute-force protection"
+msgstr ""
+
+#: build/admin.js:2
+msgid "Progressive delay per IP and per account – no hard lock, so nobody can block other people’s accounts."
+msgstr ""
+
+#: build/admin.js:2
+msgid "Failed attempts before a pause"
+msgstr ""
+
+#: build/admin.js:2
+msgid "First pause"
+msgstr ""
+
+#: build/admin.js:2
+#: build/admin.js:8
+msgid "minutes"
+msgstr ""
+
+#: build/admin.js:2
+msgid "Slows down attacks from many IP addresses. Each further pause doubles, up to 24 hours per IP."
+msgstr ""
+
+#: build/admin.js:2
+msgid "Client IP address"
+msgstr ""
+
+#: build/admin.js:2
+msgid "Only change this if your site runs behind a proxy or CDN. Untrusted headers can be forged."
+msgstr ""
+
+#: build/admin.js:2
+msgid "Direct connection (REMOTE_ADDR)"
+msgstr ""
+
+#: build/admin.js:2
+msgid "Secure other access paths"
+msgstr ""
+
+#: build/admin.js:2
+msgid "Close the ways around the login screen."
+msgstr ""
+
+#: build/admin.js:2
+msgid "XML-RPC"
+msgstr ""
+
+#: build/admin.js:2
+msgid "Not needed by most sites. Required by the WordPress mobile app and Jetpack."
+msgstr ""
+
+#: build/admin.js:2
+msgid "Disabled"
+msgstr ""
+
+#: build/admin.js:2
+#: build/admin.js:8
+msgid "Enabled"
+msgstr ""
+
+#: build/admin.js:2
+msgid "Codes from an authenticator app (TOTP). Users set it up themselves in their profile; required roles are guided through the setup at their next login. A passkey counts as second factor automatically."
+msgstr ""
+
+#: build/admin.js:2
+#: build/admin.js:8
+msgid "Off"
+msgstr ""
+
+#: build/admin.js:2
+msgid "Optional"
+msgstr ""
+
+#: build/admin.js:2
+msgid "Required for roles"
+msgstr ""
+
+#: build/admin.js:2
+msgid "Required for"
+msgstr ""
+
+#: build/admin.js:2
+msgid "Trust devices"
+msgstr ""
+
+#. translators: %d: number of days
+#: build/admin.js:3
+#, js-format
+msgid "Offer “Trust this device for %d day” after entering a code."
+msgid_plural "Offer “Trust this device for %d days” after entering a code."
+msgstr[0] ""
+msgstr[1] ""
+
+#: build/admin.js:3
+msgid "10 one-time codes are created during setup, in case the phone gets lost."
+msgstr ""
+
+#: build/admin.js:3
+#: build/admin.js:7
+msgid "Always on"
+msgstr ""
+
+#: build/admin.js:3
+msgid "Visitors only enter their email address. They receive a link to set their password, which also confirms the address."
+msgstr ""
+
+#: build/admin.js:3
+msgid "Allow visitors to create an account"
+msgstr ""
+
+#: build/admin.js:3
+msgid "Open"
+msgstr ""
+
+#: build/admin.js:3
+msgid "Closed"
+msgstr ""
+
+#: build/admin.js:3
+msgid "Role for new accounts"
+msgstr ""
+
+#: build/admin.js:3
+msgid "Registration is enabled for this network. It is managed under Network Admin › Settings."
+msgstr ""
+
+#: build/admin.js:3
+msgid "Registration is disabled for this network. It is managed under Network Admin › Settings."
+msgstr ""
+
+#: build/admin.js:3
+msgid "Ask for consent to the privacy policy"
+msgstr ""
+
+#: build/admin.js:3
+msgid "Required checkbox with a link to your privacy policy."
+msgstr ""
+
+#: build/admin.js:3
+msgid "Only shown once a privacy policy page is set."
+msgstr ""
+
+#: build/admin.js:3
+msgid "Passwords"
+msgstr ""
+
+#: build/admin.js:3
+msgid "Applies when setting a new password. 12 or more characters are recommended."
+msgstr ""
+
+#: build/admin.js:3
+msgid "characters"
+msgstr ""
+
+#: build/admin.js:3
+msgid "— None —"
+msgstr ""
+
+#: build/admin.js:3
+msgid "Language"
+msgstr ""
+
+#: build/admin.js:3
+msgid "Show language switcher"
+msgstr ""
+
+#: build/admin.js:3
+msgid "Lets visitors choose any language installed on this site."
+msgstr ""
+
+#. translators: %s: directory of the log files, e.g. wp-content/portier-logs
+#: build/admin.js:4
+#, js-format
+msgid "Records setting changes, account security and logins with time, person, IP address and browser – in a file on the server (%s), kept for 12 months."
+msgstr ""
+
+#: build/admin.js:4
+msgid "Record actions"
+msgstr ""
+
+#: build/admin.js:4
+msgid "Recommended: shows later who changed what and when."
+msgstr ""
+
+#: build/admin.js:4
+msgid "Switch the audit log off?"
+msgstr ""
+
+#: build/admin.js:4
+msgid "Switch off"
+msgstr ""
+
+#: build/admin.js:4
+msgid "Keep recording"
+msgstr ""
+
+#: build/admin.js:4
+msgid "Changes to the settings, account security and logins are then no longer recorded – later nobody can see who changed what."
+msgstr ""
+
+#: build/admin.js:4
+msgid "Existing log files stay. Switching off is still recorded as the last entry. It takes effect when you save."
+msgstr ""
+
+#: build/admin.js:4
+msgid "Legal links"
+msgstr ""
+
+#: build/admin.js:4
+msgid "Shown in the footer of the login page. The privacy policy is linked automatically."
+msgstr ""
+
+#: build/admin.js:4
+msgid "Accessibility statement"
+msgstr ""
+
+#: build/admin.js:4
+msgid "Change privacy policy page"
+msgstr ""
+
+#: build/admin.js:4
+msgid "Set a privacy policy page"
+msgstr ""
+
+#: build/admin.js:4
+msgid "Enter this URI in the Google Cloud Console under “Authorized redirect URIs”."
+msgstr ""
+
+#: build/admin.js:4
+msgid "Enter this URI in the LinkedIn Developer Portal under “Auth” → “Authorized redirect URLs”."
+msgstr ""
+
+#: build/admin.js:4
+msgid "Enter this URI in the Discord Developer Portal under “OAuth2” → “Redirects”."
+msgstr ""
+
+#: build/admin.js:4
+msgid "Register this URI as redirect URI at the provider."
+msgstr ""
+
+#: build/admin.js:4
+msgid "Active"
+msgstr ""
+
+#: build/admin.js:4
+msgid "Setup needed"
+msgstr ""
+
+#: build/admin.js:4
+msgid "Inactive"
+msgstr ""
+
+#: build/admin.js:4
+msgid "in wp-config.php"
+msgstr ""
+
+#: build/admin.js:4
+msgid "OpenID Connect with PKCE, state and nonce."
+msgstr ""
+
+#: build/admin.js:4
+msgid "Sign In with LinkedIn using OpenID Connect."
+msgstr ""
+
+#: build/admin.js:4
+msgid "OAuth 2.0 with PKCE – only accounts with a verified email address."
+msgstr ""
+
+#: build/admin.js:4
+#, js-format
+msgid "Log in with %s."
+msgstr ""
+
+#: build/admin.js:4
+msgid "Collapse"
+msgstr ""
+
+#: build/admin.js:4
+msgid "Configure"
+msgstr ""
+
+#: build/admin.js:4
+msgid "Client ID"
+msgstr ""
+
+#: build/admin.js:4
+msgid "Set in wp-config.php"
+msgstr ""
+
+#: build/admin.js:4
+msgid "Client secret"
+msgstr ""
+
+#: build/admin.js:4
+msgid "Saved – leave empty to keep it"
+msgstr ""
+
+#: build/admin.js:4
+msgid "Redirect URI"
+msgstr ""
+
+#: build/admin.js:4
+msgid "Link accounts"
+msgstr ""
+
+#: build/admin.js:4
+msgid "Verified email only"
+msgstr ""
+
+#: build/admin.js:4
+msgid "Never"
+msgstr ""
+
+#: build/admin.js:4
+msgid "New accounts"
+msgstr ""
+
+#: build/admin.js:4
+msgid "Allow"
+msgstr ""
+
+#: build/admin.js:4
+msgid "Existing only"
+msgstr ""
+
+#: build/admin.js:4
+msgid "Registration is closed, so no new accounts are created until it is opened (tab “Registration”)."
+msgstr ""
+
+#. translators: %s: constant name prefix, e.g. PORTIER_GOOGLE_
+#: build/admin.js:5
+#, js-format
+msgid "Tip: keep the secret out of the database with %sCLIENT_SECRET in wp-config.php."
+msgstr ""
+
+#: build/admin.js:5
+msgid "The test could not be run."
+msgstr ""
+
+#: build/admin.js:5
+msgid "Testing…"
+msgstr ""
+
+#: build/admin.js:5
+msgid "Test connection"
+msgstr ""
+
+#: build/admin.js:5
+msgid "Developer console"
+msgstr ""
+
+#: build/admin.js:5
+msgid "Guide"
+msgstr ""
+
+#. translators: 1: method name, 2: position, 3: number of methods
+#: build/admin.js:6
+#, js-format
+msgid "Move %1$s (position %2$d of %3$d)"
+msgstr ""
+
+#. translators: 1: method name, 2: position, 3: number of methods
+#: build/admin.js:7
+#, js-format
+msgid "%1$s is now at position %2$d of %3$d."
+msgstr ""
+
+#: build/admin.js:7
+msgid "Email & password"
+msgstr ""
+
+#: build/admin.js:7
+msgid "The classic login. Uses WordPress authentication, so security plugins keep working."
+msgstr ""
+
+#: build/admin.js:7
+msgid "One step"
+msgstr ""
+
+#: build/admin.js:7
+msgid "Two steps"
+msgstr ""
+
+#: build/admin.js:7
+msgid "First the email address, then the password on its own screen – calm and clear. Password managers keep working."
+msgstr ""
+
+#: build/admin.js:7
+msgid "Email address and password on the same screen."
+msgstr ""
+
+#. translators: %d: lifetime of the login link in minutes
+#: build/admin.js:8
+#, js-format
+msgid "One-time login link by email, valid for %d minute. Opens a confirmation page, so email scanners cannot log anybody in."
+msgid_plural "One-time login link by email, valid for %d minutes. Opens a confirmation page, so email scanners cannot log anybody in."
+msgstr[0] ""
+msgstr[1] ""
+
+#: build/admin.js:8
+msgid "Link valid for"
+msgstr ""
+
+#: build/admin.js:8
+msgid "Between 5 and 60 minutes. Shorter is safer."
+msgstr ""
+
+#: build/admin.js:8
+msgid "Below the login form"
+msgstr ""
+
+#: build/admin.js:8
+msgid "Order of the buttons below the form: drag the handle, or focus it and use the arrow keys."
+msgstr ""
+
+#: build/admin.js:8
+msgid "WebAuthn – phishing-resistant, with autofill in the email field. Replaces password and second factor."
+msgstr ""
+
+#: build/admin.js:8
+msgid "Recommended"
+msgstr ""
+
+#: build/admin.js:8
+msgid "Passkeys need a secure connection (HTTPS). They appear on the login page once the site runs on HTTPS."
+msgstr ""
+
+#: build/admin.js:8
+msgid "Everybody adds their passkeys in their profile (Users → Profile → Passkeys)."
+msgstr ""
+
+#: build/admin.js:8
+msgid "Social login overview"
+msgstr ""
+
+#: build/admin.js:8
+#: build/admin.js:9
+msgid "Preview"
+msgstr ""
+
+#: build/admin.js:8
+msgid "These buttons appear below the login form – in this order."
+msgstr ""
+
+#: build/admin.js:9
+msgid "No other method is active yet."
+msgstr ""
+
+#: build/admin.js:9
+msgid "A taken-over Google or Discord account must not open your admin. Accounts with these roles always log in with their password (and 2FA)."
+msgstr ""
+
+#: build/admin.js:9
+msgid "Start"
+msgstr ""
+
+#: build/admin.js:9
+msgid "Error"
+msgstr ""
+
+#: build/admin.js:9
+msgid "Forgot password"
+msgstr ""
+
+#: build/admin.js:9
+msgid "Device"
+msgstr ""
+
+#: build/admin.js:9
+msgid "Mobile"
+msgstr ""
+
+#: build/admin.js:9
+msgid "Tablet"
+msgstr ""
+
+#: build/admin.js:9
+msgid "Desktop"
+msgstr ""
+
+#: build/admin.js:9
+msgid "Screen"
+msgstr ""
+
+#: build/admin.js:9
+msgid "Live"
+msgstr ""
+
+#: build/admin.js:9
+msgid "Unsaved changes"
+msgstr ""
+
+#: build/admin.js:9
+msgid "Preview – drag or use the arrow keys to scroll"
+msgstr ""
+
+#: build/admin.js:9
+msgid "Preview of the login page"
+msgstr ""
+
+#: build/admin.js:9
+msgid "Drag the focus point"
+msgstr ""
+
+#: build/admin.js:9
+msgid "Choose a background image"
+msgstr ""
+
+#: build/admin.js:9
+msgid "Use this image"
+msgstr ""
+
+#. translators: %d: percentage
+#: build/admin.js:10
+#, js-format
+msgid "%d %%"
+msgstr ""
+
+#: build/admin.js:10
+msgid "Lies behind the template background, which becomes an overlay – its transparency decides how much of the image shows."
+msgstr ""
+
+#: build/admin.js:10
+msgid "Change image"
+msgstr ""
+
+#: build/admin.js:10
+msgid "Remove"
+msgstr ""
+
+#: build/admin.js:10
+msgid "Focus point horizontal"
+msgstr ""
+
+#: build/admin.js:10
+msgid "Focus point vertical"
+msgstr ""
+
+#: build/admin.js:10
+msgid "Overlay transparency"
+msgstr ""
+
+#: build/admin.js:10
+msgid "0 % · template only"
+msgstr ""
+
+#: build/admin.js:10
+msgid "Default 50 %"
+msgstr ""
+
+#: build/admin.js:10
+msgid "100 % · image only"
+msgstr ""
+
+#: build/admin.js:10
+msgid "Own image for dark mode"
+msgstr ""
+
+#: build/admin.js:10
+msgid "Shown when the page appears dark."
+msgstr ""
+
+#: build/admin.js:10
+msgid "Change dark-mode image"
+msgstr ""
+
+#: build/admin.js:10
+msgid "Choose dark-mode image"
+msgstr ""
+
+#: build/admin.js:10
+msgid "On mobile devices"
+msgstr ""
+
+#: build/admin.js:10
+msgid "The image fills the area above the form."
+msgstr ""
+
+#: build/admin.js:10
+msgid "Choose image"
+msgstr ""
+
+#: build/admin.js:10
+msgid "From the media library. Texts outside the form get glass plates automatically, so they stay readable on any image."
+msgstr ""
+
+#: build/admin.js:10
+msgid "A closing brace } is missing."
+msgstr ""
+
+#: build/admin.js:10
+msgid "An opening brace { is missing."
+msgstr ""
+
+#: build/admin.js:10
+msgid "A colon : is missing after the property."
+msgstr ""
+
+#: build/admin.js:10
+msgid "A closing parenthesis ) is missing."
+msgstr ""
+
+#: build/admin.js:10
+msgid "There is a closing brace } too many."
+msgstr ""
+
+#: build/admin.js:10
+msgid "Unexpected character."
+msgstr ""
+
+#: build/admin.js:10
+msgid "Unknown property."
+msgstr ""
+
+#: build/admin.js:10
+msgid "Invalid value."
+msgstr ""
+
+#. translators: %d: number of errors
+#: build/admin.js:11
+#, js-format
+msgid "The CSS is not valid (%d error). Invalid rules are removed when saving."
+msgid_plural "The CSS is not valid (%d errors). Invalid rules are removed when saving."
+msgstr[0] ""
+msgstr[1] ""
+
+#. translators: 1: line number, 2: message from the CSS checker
+#: build/admin.js:12
+#, js-format
+msgid "Line %1$d: %2$s"
+msgstr ""
+
+#: build/admin.js:12
+msgid "Format"
+msgstr ""
+
+#: build/admin.js:12
+msgid "Shift+Alt+F formats, too. In the editor, Esc and then Tab leaves it."
+msgstr ""
+
+#: build/admin.js:12
+msgid "Own design"
+msgstr ""
+
+#: build/admin.js:12
+msgid "Starts as a copy of the chosen template"
+msgstr ""
+
+#. translators: %s: colour name, e.g. Primary
+#: build/admin.js:13
+#, js-format
+msgid "Choose colour: %s"
+msgstr ""
+
+#: build/admin.js:13
+#: build/admin.js:14
+msgid "Default"
+msgstr ""
+
+#. translators: %d: radius in pixels
+#: build/admin.js:14
+#, js-format
+msgid "%d pixels"
+msgstr ""
+
+#: build/admin.js:14
+msgid "Text on the card"
+msgstr ""
+
+#: build/admin.js:14
+msgid "Secondary text"
+msgstr ""
+
+#: build/admin.js:14
+msgid "Accent / links"
+msgstr ""
+
+#: build/admin.js:14
+msgid "Field border"
+msgstr ""
+
+#: build/admin.js:14
+msgid "Focus ring"
+msgstr ""
+
+#: build/admin.js:14
+msgid "Button text"
+msgstr ""
+
+#: build/admin.js:14
+msgid "Error messages"
+msgstr ""
+
+#. translators: %d: number of failed contrast checks
+#: build/admin.js:15
+#, js-format
+msgid "%d contrast is too low for WCAG 2.2 AA. Please adjust the colours."
+msgid_plural "%d contrasts are too low for WCAG 2.2 AA. Please adjust the colours."
+msgstr[0] ""
+msgstr[1] ""
+
+#: build/admin.js:15
+msgid "All contrasts meet WCAG 2.2 AA."
+msgstr ""
+
+#. translators: %s: required contrast, e.g. 4.5
+#: build/admin.js:16
+#, js-format
+msgid "min. %s:1"
+msgstr ""
+
+#: build/admin.js:16
+msgid "Eight designs for the login page. Every template meets WCAG 2.2 AA. You see changes on the right at once."
+msgstr ""
+
+#: build/admin.js:16
+msgid "Colours & shape"
+msgstr ""
+
+#: build/admin.js:16
+msgid "Empty fields use the template. With Aurora, own colours apply to the light look; dark mode keeps its tested colours."
+msgstr ""
+
+#: build/admin.js:16
+msgid "Empty fields use the template."
+msgstr ""
+
+#: build/admin.js:16
+msgid "Primary"
+msgstr ""
+
+#: build/admin.js:16
+msgid "Accent"
+msgstr ""
+
+#: build/admin.js:16
+msgid "Background"
+msgstr ""
+
+#. translators: %s: font name
+#: build/admin.js:17
+#, js-format
+msgid "Template default (%s)"
+msgstr ""
+
+#: build/admin.js:17
+msgid "All fonts are hosted on this site – no request to Google or other font services."
+msgstr ""
+
+#: build/admin.js:17
+msgid "Light"
+msgstr ""
+
+#: build/admin.js:17
+msgid "Dark"
+msgstr ""
+
+#: build/admin.js:17
+msgid "Auto (system)"
+msgstr ""
+
+#: build/admin.js:17
+msgid "“Auto” follows the visitor’s system setting."
+msgstr ""
+
+#. translators: %s: template name
+#: build/admin.js:18
+#, js-format
+msgid "%s has one fixed colour scheme. Aurora also offers dark mode."
+msgstr ""
+
+#: build/admin.js:18
+msgid "Texts"
+msgstr ""
+
+#: build/admin.js:18
+msgid "Shown next to the site name in the header bar."
+msgstr ""
+
+#: build/admin.js:18
+msgid "Shown in the large area beside the form."
+msgstr ""
+
+#: build/admin.js:18
+msgid "Label"
+msgstr ""
+
+#: build/admin.js:18
+msgid "Leave empty to use the suggestion."
+msgstr ""
+
+#: build/admin.js:18
+msgid "Accessibility check"
+msgstr ""
+
+#: build/admin.js:18
+msgid "Checked live on the preview (WCAG 2.2): 4.5:1 for text, 3:1 for borders and focus."
+msgstr ""
+
+#: build/admin.js:18
+msgid "Custom CSS"
+msgstr ""
+
+#: build/admin.js:18
+msgid "For administrators who may add unfiltered HTML. Cleaned when saved; the last 10 versions are kept."
+msgstr ""
+
+#: build/admin.js:18
+msgid "CSS"
+msgstr ""
+
+#: build/admin.js:18
+msgid "Available variables: --portier-color-*, --portier-radius-*, --portier-font, --portier-font-display. Changes appear in the preview while you type."
+msgstr ""
+
+#: build/admin.js:18
+msgid "Restore an earlier version"
+msgstr ""
+
+#: build/admin.js:18
+msgid "Choose a version…"
+msgstr ""
+
+#. translators: 1: date and time, 2: author
+#: build/admin.js:19
+#, js-format
+msgid "%1$s – %2$s"
+msgstr ""
+
+#: build/admin.js:19
+msgid "The version is loaded into the editor; save to use it."
+msgstr ""
+
+#: build/admin.js:19
+#: build/admin.js:20
+msgid "The settings could not be loaded."
+msgstr ""
+
+#: build/admin.js:19
+msgid "Settings saved."
+msgstr ""
+
+#: build/admin.js:19
+msgid "The settings could not be saved."
+msgstr ""
+
+#. translators: %d: number of unsaved changes
+#: build/admin.js:20
+#, js-format
+msgid "%d unsaved change"
+msgid_plural "%d unsaved changes"
+msgstr[0] ""
+msgstr[1] ""
+
+#: build/admin.js:20
+msgid "All changes saved"
+msgstr ""
+
+#: build/admin.js:20
+msgid "Save changes"
+msgstr ""
+
+#: build/admin.js:20
+msgid "Custom login active"
+msgstr ""
+
+#: build/admin.js:20
+msgid "Custom login inactive"
+msgstr ""
+
+#: build/admin.js:20
+msgid "View login page"
+msgstr ""
+
+#: build/admin.js:20
+msgid "PORTIER_DISABLE is set in wp-config.php: Portier is switched off and the default WordPress login is used. Remove the constant to activate Portier again."
+msgstr ""
+
+#: build/admin.js:20
+msgid "Accounts belong to the whole network: only network administrators can change the security settings (login address on/off, limits, two-factor authentication, login links, social login roles, audit log)."
+msgstr ""
+
+#. translators: %s: date and time
+#: build/profile.js:3
+#, js-format
+msgid "last used %s"
+msgstr ""
+
+#: build/profile.js:3
+msgid "not used yet"
+msgstr ""
+
+#: build/profile.js:3
+msgid "synced"
+msgstr ""
+
+#: build/profile.js:3
+msgid "Rename"
+msgstr ""
+
+#. translators: %s: passkey name
+#: build/profile.js:4
+#, js-format
+msgid "Rename passkey “%s”"
+msgstr ""
+
+#: build/profile.js:4
+msgid "Delete"
+msgstr ""
+
+#. translators: %s: passkey name
+#: build/profile.js:5
+#, js-format
+msgid "Delete passkey “%s”"
+msgstr ""
+
+#: build/profile.js:5
+msgid "New name"
+msgstr ""
+
+#: build/profile.js:5
+msgid "Save"
+msgstr ""
+
+#: build/profile.js:5
+msgid "Save name"
+msgstr ""
+
+#: build/profile.js:5
+msgid "Name saved."
+msgstr ""
+
+#: build/profile.js:5
+msgid "Cancel renaming"
+msgstr ""
+
+#. translators: %s: passkey name
+#: build/profile.js:6
+#, js-format
+msgid "Delete the passkey “%s”? It can no longer be used to log in."
+msgstr ""
+
+#. translators: %s: passkey name
+#: build/profile.js:7
+#, js-format
+msgid "Passkey “%s” deleted."
+msgstr ""
+
+#: build/profile.js:7
+msgid "This browser does not support passkeys. Use a current browser to add one."
+msgstr ""
+
+#: build/profile.js:7
+msgid "Passkey added. You can now log in with it."
+msgstr ""
+
+#: build/profile.js:7
+msgid "Log in again"
+msgstr ""
+
+#: build/profile.js:7
+msgid "Cancelled. No passkey was added."
+msgstr ""
+
+#: build/profile.js:7
+msgid "This device already has a passkey for your account."
+msgstr ""

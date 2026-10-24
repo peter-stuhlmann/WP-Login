@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<phpunit
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:noNamespaceSchemaLocation="vendor/phpunit/phpunit/phpunit.xsd"
+    bootstrap="tests/bootstrap.php"
+    colors="true"
+    convertDeprecationsToExceptions="true"
+    beStrictAboutOutputDuringTests="true"
+    failOnRisky="true"
+    failOnWarning="true"
+>
+    <php>
+        <!-- Runs the same integration suite on a multisite network. -->
+        <env name="WP_MULTISITE" value="1"/>
+    </php>
+    <groups>
+        <exclude>
+            <group>ms-excluded</group>
+        </exclude>
+    </groups>
+    <extensions>
+        <!-- Work queued for after the response must not leak into the next test. -->
+        <extension class="Portier\Tests\Support\FreshRequestPerTest"/>
+    </extensions>
+    <testsuites>
+        <testsuite name="integration">
+            <directory suffix="Test.php">tests/Integration</directory>
+        </testsuite>
+    </testsuites>
+</phpunit>

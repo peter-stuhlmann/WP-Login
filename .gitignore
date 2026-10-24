@@ -1,0 +1,13 @@
+/vendor/
+/node_modules/
+/build/
+/coverage/
+/test-results/
+/playwright-report/
+/tests/e2e/.auth/
+/.phpunit.result.cache
+/.phpunit.cache/
+/wp-tests-config.php
+.DS_Store
+*.log
+/.playwright-mcp/

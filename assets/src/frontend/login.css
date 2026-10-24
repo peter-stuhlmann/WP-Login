@@ -1,0 +1,1628 @@
+/**
+ * Portier – "Aurora" theme.
+ *
+ * Mobile first: on small screens the card is a bottom sheet over the
+ * aurora backdrop; from 768 px on it becomes a centred glass card.
+ * All colours are design tokens (--portier-*) that mirror the Figma
+ * variables "Aurora · Light / Dark" and pass WCAG 2.2 AA.
+ */
+
+/* -------- Tokens */
+
+:root {
+	--portier-color-bg: #f4f3fa;
+	--portier-color-surface: #fff;
+	--portier-color-glass: rgb(255 255 255 / 72%);
+	--portier-color-glass-stroke: rgb(255 255 255 / 85%);
+	--portier-color-text: #0f0e17;
+	--portier-color-muted: #4e4e63;
+	--portier-color-subtle: #66667b;
+	--portier-color-border: #83839a;
+	--portier-color-divider: #e3e2ec;
+	--portier-color-primary: #15131f;
+	--portier-color-primary-hover: #2a2740;
+	--portier-color-on-primary: #fff;
+	--portier-color-secondary: #fff;
+	--portier-color-secondary-border: #d6d5e1;
+	--portier-color-accent: #6230e0;
+	--portier-color-focus: #6d3aed;
+	--portier-color-error: #be1e3a;
+	--portier-color-error-bg: #fdedf0;
+	--portier-color-success: #0b7550;
+	--portier-color-success-bg: #e5f6ee;
+	--portier-color-warning: #8f5200;
+	--portier-color-warning-bg: #fff3da;
+	--portier-color-info: #2952cc;
+	--portier-color-info-bg: #ebf0ff;
+	--portier-color-field: #fff;
+	--portier-color-chip: #eeedf6;
+	--portier-aurora-1: #a78bfa;
+	--portier-aurora-2: #60a5fa;
+	--portier-aurora-3: #f0abfc;
+	--portier-aurora-4: #5eead4;
+	--portier-aurora-opacity: 0.7;
+	--portier-shadow-card: 0 24px 64px -12px rgb(43 27 107 / 12%), 0 2px 6px rgb(43 27 107 / 5%);
+	--portier-radius-field: 14px;
+	--portier-radius-card: 28px;
+	--portier-radius-sheet: 32px;
+	--portier-radius-check: 7px;
+	--portier-radius-button: var(--portier-radius-field);
+	--portier-radius-alert: 14px;
+	--portier-stroke: 1px;
+	--portier-control-height: 52px;
+	--portier-button-weight: 500;
+	--portier-shadow-button: 0 1px 2px rgb(15 14 23 / 12%), inset 0 1px 0 rgb(255 255 255 / 14%);
+	--portier-shadow-control: none;
+	--portier-title-size: 1.75rem;
+	--portier-title-weight: 600;
+	--portier-title-tracking: -0.02em;
+	--portier-font: "Geist", system-ui, -apple-system, "Segoe UI", roboto, sans-serif;
+	--portier-font-display: var(--portier-font);
+	--portier-ease: cubic-bezier(0.2, 0.8, 0.2, 1);
+
+	color-scheme: light;
+}
+
+/* Colour scheme setting of templates with a dark variant ("auto" = system). */
+:root[data-portier-scheme="auto"] {
+	color-scheme: light dark;
+}
+
+:root[data-portier-scheme="dark"] {
+	color-scheme: dark;
+}
+
+/* Aurora dark: forced by the setting, or following the system with "auto". */
+:root[data-portier-template="aurora"][data-portier-scheme="dark"] {
+	--portier-color-bg: #08080d;
+	--portier-color-surface: #12121a;
+	--portier-color-glass: rgb(20 20 30 / 70%);
+	--portier-color-glass-stroke: rgb(255 255 255 / 8%);
+	--portier-color-text: #f3f3f8;
+	--portier-color-muted: #ababbe;
+	--portier-color-subtle: #9292a6;
+	--portier-color-border: #74748c;
+	--portier-color-divider: #272734;
+	--portier-color-primary: #f3f3f8;
+	--portier-color-primary-hover: #fff;
+	--portier-color-on-primary: #0f0e17;
+	--portier-color-secondary: #1a1a25;
+	--portier-color-secondary-border: #30303f;
+	--portier-color-accent: #b9a0ff;
+	--portier-color-focus: #b9a0ff;
+	--portier-color-error: #ff8193;
+	--portier-color-error-bg: #2b1219;
+	--portier-color-success: #52dda0;
+	--portier-color-success-bg: #0d2219;
+	--portier-color-warning: #f7b955;
+	--portier-color-warning-bg: #2a1f0a;
+	--portier-color-info: #8ea8ff;
+	--portier-color-info-bg: #121a33;
+	--portier-color-field: #0d0d14;
+	--portier-color-chip: #1e1e2a;
+	--portier-aurora-1: #7c3aed;
+	--portier-aurora-2: #2563eb;
+	--portier-aurora-3: #c026d3;
+	--portier-aurora-4: #0d9488;
+	--portier-aurora-opacity: 0.45;
+	--portier-shadow-card: 0 24px 64px -12px rgb(0 0 0 / 50%);
+	--portier-shadow-button: 0 1px 2px rgb(0 0 0 / 30%);
+}
+
+@media (prefers-color-scheme: dark) {
+
+	:root[data-portier-template="aurora"][data-portier-scheme="auto"] {
+		--portier-color-bg: #08080d;
+		--portier-color-surface: #12121a;
+		--portier-color-glass: rgb(20 20 30 / 70%);
+		--portier-color-glass-stroke: rgb(255 255 255 / 8%);
+		--portier-color-text: #f3f3f8;
+		--portier-color-muted: #ababbe;
+		--portier-color-subtle: #9292a6;
+		--portier-color-border: #74748c;
+		--portier-color-divider: #272734;
+		--portier-color-primary: #f3f3f8;
+		--portier-color-primary-hover: #fff;
+		--portier-color-on-primary: #0f0e17;
+		--portier-color-secondary: #1a1a25;
+		--portier-color-secondary-border: #30303f;
+		--portier-color-accent: #b9a0ff;
+		--portier-color-focus: #b9a0ff;
+		--portier-color-error: #ff8193;
+		--portier-color-error-bg: #2b1219;
+		--portier-color-success: #52dda0;
+		--portier-color-success-bg: #0d2219;
+		--portier-color-warning: #f7b955;
+		--portier-color-warning-bg: #2a1f0a;
+		--portier-color-info: #8ea8ff;
+		--portier-color-info-bg: #121a33;
+		--portier-color-field: #0d0d14;
+		--portier-color-chip: #1e1e2a;
+		--portier-aurora-1: #7c3aed;
+		--portier-aurora-2: #2563eb;
+		--portier-aurora-3: #c026d3;
+		--portier-aurora-4: #0d9488;
+		--portier-aurora-opacity: 0.45;
+		--portier-shadow-card: 0 24px 64px -12px rgb(0 0 0 / 50%);
+		--portier-shadow-button: 0 1px 2px rgb(0 0 0 / 30%);
+	}
+}
+
+/* -------- Base */
+
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+}
+
+html {
+	-webkit-text-size-adjust: 100%;
+	text-size-adjust: 100%;
+}
+
+body.portier {
+	margin: 0;
+	min-height: 100vh;
+	min-height: 100dvh;
+	background: var(--portier-color-bg);
+	color: var(--portier-color-text);
+	font-family: var(--portier-font);
+	font-size: 1rem;
+	line-height: 1.5;
+	-webkit-font-smoothing: antialiased;
+	text-rendering: optimizelegibility;
+}
+
+/* Zero specificity, so component classes (e.g. .portier-link) always win. */
+:where(.portier) a {
+	color: inherit;
+}
+
+.portier .screen-reader-text {
+	position: absolute !important;
+	width: 1px;
+	height: 1px;
+	padding: 0;
+	margin: -1px;
+	overflow: hidden;
+	clip-path: inset(50%);
+	white-space: nowrap;
+	border: 0;
+}
+
+.portier :focus-visible {
+	outline: 2px solid var(--portier-color-focus);
+	outline-offset: 2px;
+}
+
+.portier-skip-link {
+	position: absolute;
+	top: 8px;
+	left: 8px;
+	z-index: 50;
+	padding: 10px 16px;
+	border-radius: 10px;
+	background: var(--portier-color-primary);
+	color: var(--portier-color-on-primary) !important;
+	font-weight: 500;
+	text-decoration: none;
+	transform: translateY(-200%);
+	transition: transform 150ms var(--portier-ease);
+}
+
+.portier-skip-link:focus {
+	transform: translateY(0);
+}
+
+/* -------- Aurora backdrop */
+
+.portier-backdrop {
+	position: fixed;
+	inset: 0;
+	z-index: 0;
+	overflow: hidden;
+	pointer-events: none;
+}
+
+.portier-aurora {
+	position: absolute;
+	border-radius: 50%;
+	filter: blur(64px);
+	opacity: var(--portier-aurora-opacity);
+	animation: portier-drift 22s var(--portier-ease) infinite alternate;
+	will-change: transform;
+}
+
+.portier-aurora--1 {
+	top: -14%;
+	left: -30%;
+	width: 110vw;
+	height: 46vh;
+	background: var(--portier-aurora-1);
+}
+
+.portier-aurora--2 {
+	top: -10%;
+	right: -32%;
+	width: 95vw;
+	height: 40vh;
+	background: var(--portier-aurora-2);
+	animation-delay: -6s;
+}
+
+.portier-aurora--3 {
+	top: 14%;
+	left: 6%;
+	width: 75vw;
+	height: 30vh;
+	background: var(--portier-aurora-3);
+	animation-delay: -12s;
+}
+
+.portier-aurora--4 {
+	top: 32%;
+	left: -18%;
+	width: 66vw;
+	height: 28vh;
+	background: var(--portier-aurora-4);
+	animation-delay: -17s;
+}
+
+@keyframes portier-drift {
+
+	from {
+		transform: translate3d(0, 0, 0) scale(1);
+	}
+
+	to {
+		transform: translate3d(4vw, 3vh, 0) scale(1.08);
+	}
+}
+
+/* -------- Page layout (mobile first) */
+
+.portier-page {
+	position: relative;
+	z-index: 1;
+	display: flex;
+	flex-direction: column;
+	min-height: 100vh;
+	min-height: 100dvh;
+}
+
+.portier-header {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	gap: 16px;
+
+	/* The admin preview passes the phone's insets as --portier-safe-*. */
+	padding: max(16px, calc(var(--portier-safe-top, env(safe-area-inset-top)) + 10px)) 20px 0;
+}
+
+.portier-main {
+	display: flex;
+	flex: 1;
+	flex-direction: column;
+	justify-content: flex-end;
+	padding-top: clamp(48px, 16vh, 180px);
+}
+
+.portier-card {
+	display: flex;
+	flex-direction: column;
+	gap: 24px;
+	padding: 32px 24px 24px;
+	border-top: 1px solid var(--portier-color-glass-stroke);
+	border-radius: var(--portier-radius-sheet) var(--portier-radius-sheet) 0 0;
+	background: var(--portier-color-glass);
+	box-shadow: 0 -8px 40px rgb(43 27 107 / 8%);
+	backdrop-filter: blur(40px) saturate(1.4);
+	-webkit-backdrop-filter: blur(40px) saturate(1.4);
+	view-transition-name: portier-card;
+}
+
+.portier-card:focus {
+	outline: none;
+}
+
+.portier-footer {
+	padding: 8px 24px max(24px, var(--portier-safe-bottom, env(safe-area-inset-bottom)));
+	background: var(--portier-color-glass);
+	backdrop-filter: blur(40px) saturate(1.4);
+	-webkit-backdrop-filter: blur(40px) saturate(1.4);
+}
+
+.portier-footer__links {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	gap: 4px 16px;
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	font-size: 0.8125rem;
+}
+
+.portier-footer__links a {
+	display: inline-block;
+	padding: 6px 2px;
+	color: var(--portier-color-muted);
+	text-decoration: none;
+}
+
+.portier-footer__links a:hover {
+	color: var(--portier-color-text);
+	text-decoration: underline;
+}
+
+@media (min-width: 768px) {
+
+	.portier-header {
+		padding: 28px 48px 0;
+	}
+
+	.portier-main {
+		align-items: center;
+		justify-content: center;
+		padding: 32px 24px;
+	}
+
+	.portier-card {
+		width: 100%;
+		max-width: 456px;
+		padding: 40px;
+		border: 1px solid var(--portier-color-glass-stroke);
+		border-radius: var(--portier-radius-card);
+		box-shadow: var(--portier-shadow-card);
+	}
+
+	.portier-footer {
+		padding: 0 48px 28px;
+		background: none;
+		backdrop-filter: none;
+		-webkit-backdrop-filter: none;
+	}
+
+	.portier-footer__links {
+		justify-content: flex-end;
+	}
+
+	.portier-aurora--1 {
+		top: -30%;
+		left: 2%;
+		width: 58vw;
+		height: 70vh;
+		filter: blur(140px);
+	}
+
+	.portier-aurora--2 {
+		top: -20%;
+		right: -6%;
+		width: 54vw;
+		height: 64vh;
+		filter: blur(140px);
+	}
+
+	.portier-aurora--3 {
+		top: 52%;
+		left: 16%;
+		width: 48vw;
+		height: 58vh;
+		filter: blur(130px);
+	}
+
+	.portier-aurora--4 {
+		top: 58%;
+		left: 66%;
+		width: 42vw;
+		height: 52vh;
+		filter: blur(130px);
+	}
+}
+
+/* -------- Header */
+
+/* Figma "Zurück (Button)": glass pill with arrow. */
+.portier-back {
+	display: inline-flex;
+	align-items: center;
+	gap: 6px;
+	min-height: 40px;
+	padding: 0 14px 0 10px;
+	border-radius: 999px;
+	background: var(--portier-color-glass);
+	color: var(--portier-color-text);
+	font-size: 0.9375rem;
+	font-weight: 500;
+	text-decoration: none;
+	backdrop-filter: blur(12px);
+}
+
+.portier-back:hover {
+	background: var(--portier-color-surface);
+}
+
+.portier-back[hidden],
+.portier-brand[hidden] {
+	display: none;
+}
+
+.portier-brand {
+	display: inline-flex;
+	align-items: center;
+	gap: 10px;
+	min-height: 44px;
+	color: var(--portier-color-text);
+	font-size: 1.125rem;
+	font-weight: 600;
+	letter-spacing: -0.015em;
+	text-decoration: none;
+}
+
+.portier-brand__logo {
+	border-radius: 9px;
+}
+
+.portier-brand__mark {
+	display: inline-grid;
+	width: 32px;
+	height: 32px;
+	border-radius: 10px;
+	background: linear-gradient(135deg, #7c3aed, #2563eb 55%, #06b6d4);
+	color: #fff;
+	font-size: 1rem;
+	place-items: center;
+}
+
+.portier-lang {
+	position: relative;
+}
+
+.portier-lang__toggle {
+	display: inline-flex;
+	align-items: center;
+	gap: 6px;
+	min-height: 40px;
+	padding: 8px 12px;
+	border: 1px solid var(--portier-color-glass-stroke);
+	border-radius: 999px;
+	background: var(--portier-color-glass);
+	font-size: 0.875rem;
+	font-weight: 500;
+	list-style: none;
+	cursor: pointer;
+	backdrop-filter: blur(20px);
+	-webkit-backdrop-filter: blur(20px);
+}
+
+.portier-lang__toggle::-webkit-details-marker {
+	display: none;
+}
+
+.portier-lang__chevron {
+	color: var(--portier-color-muted);
+	transition: transform 150ms var(--portier-ease);
+}
+
+.portier-lang[open] .portier-lang__chevron {
+	transform: rotate(180deg);
+}
+
+.portier-lang__menu {
+	position: absolute;
+	top: calc(100% + 8px);
+	right: 0;
+	z-index: 20;
+	min-width: 220px;
+	margin: 0;
+	padding: 6px;
+	border: 1px solid var(--portier-color-divider);
+	border-radius: 14px;
+	background: var(--portier-color-surface);
+	box-shadow: 0 16px 40px -8px rgb(15 14 23 / 18%);
+	list-style: none;
+}
+
+.portier-lang__menu a {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	gap: 12px;
+	min-height: 44px;
+	padding: 10px 12px;
+	border-radius: 10px;
+	color: var(--portier-color-text);
+	text-decoration: none;
+}
+
+.portier-lang__menu a:hover {
+	background: var(--portier-color-chip);
+}
+
+.portier-lang__menu a[aria-current="true"] {
+	font-weight: 600;
+}
+
+/* -------- Typography */
+
+.portier-heading {
+	display: flex;
+	flex-direction: column;
+	gap: 8px;
+}
+
+.portier-title {
+	margin: 0;
+	font-family: var(--portier-font-display);
+	font-size: var(--portier-title-size);
+	font-weight: var(--portier-title-weight);
+	line-height: 1.2;
+	letter-spacing: var(--portier-title-tracking);
+	text-wrap: balance;
+}
+
+.portier-title:focus {
+	outline: none;
+}
+
+.portier-lead {
+	margin: 0;
+	color: var(--portier-color-muted);
+	text-wrap: pretty;
+}
+
+.portier-badge {
+	display: inline-grid;
+	width: 64px;
+	height: 64px;
+	margin-bottom: 8px;
+	border: 1px solid color-mix(in srgb, currentcolor 22%, transparent);
+	border-radius: 20px;
+	background: color-mix(in srgb, currentcolor 10%, transparent);
+	color: var(--portier-color-accent);
+	place-items: center;
+}
+
+.portier-badge--success {
+	color: var(--portier-color-success);
+}
+
+.portier-badge--warning {
+	color: var(--portier-color-warning);
+}
+
+.portier-link {
+	color: var(--portier-color-accent);
+	font-weight: 500;
+	text-decoration: underline;
+	text-decoration-thickness: 1px;
+	text-underline-offset: 3px;
+}
+
+.portier-link:hover {
+	text-decoration-thickness: 2px;
+}
+
+.portier-link--back {
+	display: inline-flex;
+	align-items: center;
+	gap: 6px;
+	min-height: 44px;
+}
+
+.portier-switch {
+	margin: 0;
+	color: var(--portier-color-muted);
+	font-size: 0.875rem;
+}
+
+/* -------- Forms */
+
+.portier-form {
+	display: grid;
+	gap: 16px;
+}
+
+.portier-field {
+	display: grid;
+	gap: 8px;
+}
+
+.portier-field__head {
+	display: flex;
+	align-items: baseline;
+	justify-content: space-between;
+	gap: 12px;
+}
+
+.portier-label {
+	font-size: 0.875rem;
+	font-weight: 500;
+	line-height: 1.43;
+}
+
+.portier-optional {
+	color: var(--portier-color-muted);
+	font-weight: 400;
+}
+
+.portier-field__aside {
+	display: inline-flex;
+	align-items: center;
+	min-height: 24px; /* WCAG 2.5.8 target size */
+	font-size: 0.875rem;
+}
+
+.portier-input {
+	position: relative;
+	display: flex;
+	align-items: center;
+	min-height: var(--portier-control-height);
+	border: var(--portier-stroke) solid var(--portier-color-border);
+	border-radius: var(--portier-radius-field);
+	background: var(--portier-color-field);
+	box-shadow: var(--portier-shadow-control);
+	transition: border-color 150ms var(--portier-ease), box-shadow 150ms var(--portier-ease);
+}
+
+.portier-input:focus-within {
+	border-color: var(--portier-color-focus);
+	box-shadow: 0 0 0 1px var(--portier-color-focus), 0 0 0 5px color-mix(in srgb, var(--portier-color-focus) 18%, transparent);
+}
+
+.portier-input__control {
+	flex: 1;
+	width: 100%;
+	min-width: 0;
+	height: calc(var(--portier-control-height) - 2 * var(--portier-stroke));
+	padding: 0 16px;
+	border: 0;
+	border-radius: var(--portier-radius-field);
+	background: transparent;
+	color: var(--portier-color-text);
+	font: inherit;
+	font-size: 1rem; /* ≥ 16 px: prevents iOS from zooming into the field. */
+}
+
+.portier-input__control:focus,
+.portier-input__control:focus-visible {
+	outline: none; /* The wrapper shows the focus ring (see :focus-within). */
+}
+
+.portier-input.has-icon .portier-input__control {
+	padding-left: 46px;
+}
+
+.portier-input__icon {
+	position: absolute;
+	left: 14px;
+	color: var(--portier-color-subtle);
+	pointer-events: none;
+}
+
+.portier-input__control[type="password"],
+.portier-input__control[data-portier-password] {
+	padding-right: 4px;
+}
+
+.portier-reveal {
+	display: inline-grid;
+	flex: none;
+	width: 44px;
+	height: 44px;
+	margin-right: 4px;
+	padding: 0;
+	border: 0;
+	border-radius: 10px;
+	background: transparent;
+	color: var(--portier-color-muted);
+	cursor: pointer;
+	place-items: center;
+}
+
+.portier-reveal:hover {
+	background: var(--portier-color-chip);
+	color: var(--portier-color-text);
+}
+
+.portier-reveal[hidden],
+.portier-reveal__hide,
+.portier-reveal[aria-pressed="true"] .portier-reveal__show {
+	display: none;
+}
+
+.portier-reveal[aria-pressed="true"] .portier-reveal__hide {
+	display: block;
+}
+
+.portier-field.is-invalid .portier-input {
+	border-color: var(--portier-color-error);
+	box-shadow: 0 0 0 1px var(--portier-color-error);
+}
+
+.portier-hint,
+.portier-error {
+	display: flex;
+	align-items: flex-start;
+	gap: 6px;
+	margin: 0;
+	font-size: 0.8125rem;
+	line-height: 1.4;
+}
+
+.portier-hint {
+	color: var(--portier-color-muted);
+}
+
+.portier-hint[hidden] {
+	display: none;
+}
+
+.portier-error {
+	color: var(--portier-color-error);
+	font-weight: 500;
+}
+
+.portier-hint .portier-icon,
+.portier-error .portier-icon {
+	flex: none;
+	margin-top: 1px;
+}
+
+.portier-check {
+	display: flex;
+	align-items: flex-start;
+	gap: 12px;
+}
+
+/* 24 × 24 px target (WCAG 2.5.8) with the 22 px Figma box centred in it. */
+.portier-check__box {
+	position: relative;
+	display: grid;
+	flex: none;
+	width: 24px;
+	height: 24px;
+	place-items: center;
+}
+
+.portier-check__control {
+	position: absolute;
+	inset: 0;
+	z-index: 1;
+	width: 24px;
+	height: 24px;
+	margin: 0;
+	opacity: 0;
+	cursor: pointer;
+}
+
+.portier-check__mark {
+	display: grid;
+	width: 22px;
+	height: 22px;
+	border: max(1.5px, var(--portier-stroke)) solid var(--portier-color-border);
+	border-radius: var(--portier-radius-check);
+	background: var(--portier-color-field);
+	color: var(--portier-color-on-primary);
+	place-items: center;
+	transition: background-color 150ms var(--portier-ease), border-color 150ms var(--portier-ease);
+}
+
+.portier-check__icon {
+	opacity: 0;
+	stroke-width: 3;
+	transform: scale(0.6);
+	transition: opacity 150ms var(--portier-ease), transform 150ms var(--portier-ease);
+}
+
+.portier-check__control:checked + .portier-check__mark {
+	border-color: var(--portier-color-accent);
+	background: var(--portier-color-accent);
+}
+
+.portier-check__control:checked + .portier-check__mark .portier-check__icon {
+	opacity: 1;
+	transform: none;
+}
+
+.portier-check__control:hover + .portier-check__mark {
+	border-color: var(--portier-color-accent);
+}
+
+.portier-check__control:focus-visible + .portier-check__mark {
+	outline: 2px solid var(--portier-color-focus);
+	outline-offset: 2px;
+}
+
+/* Label: Figma "Body/SM" (14/20), centred on the box for one line. */
+.portier-check__label {
+	padding-top: 2px;
+	font-size: 0.875rem;
+	line-height: 1.4286; /* 20 px at 14 px */
+	cursor: pointer;
+}
+
+.portier-check.is-invalid .portier-check__mark {
+	border-color: var(--portier-color-error);
+	box-shadow: 0 0 0 1px var(--portier-color-error);
+}
+
+.portier-hp {
+	position: absolute;
+	left: -10000px;
+	width: 1px;
+	height: 1px;
+	overflow: hidden;
+}
+
+/* -------- Buttons */
+
+.portier-actions {
+	display: grid;
+	gap: 12px;
+}
+
+.portier-button {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	gap: 10px;
+	width: 100%;
+	min-height: var(--portier-control-height);
+	padding: 0 20px;
+	border: var(--portier-stroke) solid transparent;
+	border-radius: var(--portier-radius-button);
+	font: inherit;
+	font-weight: var(--portier-button-weight);
+	line-height: 1.25;
+	text-decoration: none;
+	cursor: pointer;
+	transition: background-color 150ms var(--portier-ease), transform 100ms var(--portier-ease), box-shadow 150ms var(--portier-ease);
+}
+
+.portier-button:active {
+	transform: scale(0.99);
+}
+
+.portier-button--primary {
+	background: var(--portier-color-primary);
+	color: var(--portier-color-on-primary) !important;
+	box-shadow: var(--portier-shadow-button);
+}
+
+.portier-button--primary:hover {
+	background: var(--portier-color-primary-hover);
+}
+
+.portier-button--secondary {
+	border-color: var(--portier-color-secondary-border);
+	background: var(--portier-color-secondary);
+	color: var(--portier-color-text) !important;
+}
+
+.portier-button--secondary:hover {
+	background: var(--portier-color-chip);
+}
+
+.portier-button__spinner {
+	display: none;
+}
+
+.portier-button[aria-busy="true"] {
+	cursor: progress;
+}
+
+.portier-button[aria-busy="true"] .portier-button__spinner {
+	display: block;
+	animation: portier-spin 800ms linear infinite;
+}
+
+.portier-button[aria-busy="true"] .portier-button__icon {
+	display: none;
+}
+
+@keyframes portier-spin {
+
+	to {
+		transform: rotate(360deg);
+	}
+}
+
+/* -------- Alerts */
+
+.portier-alert {
+	display: flex;
+	align-items: flex-start;
+	gap: 12px;
+	padding: 14px 16px;
+	border: var(--portier-stroke) solid;
+	border-radius: var(--portier-radius-alert);
+	font-size: 0.875rem;
+	line-height: 1.43;
+}
+
+.portier-alert__icon {
+	flex: none;
+	margin-top: 1px;
+}
+
+.portier-alert__title {
+	margin: 0;
+	font-weight: 600;
+}
+
+.portier-alert__text {
+	margin: 0;
+	color: var(--portier-color-text);
+}
+
+.portier-alert__list {
+	margin: 4px 0 0;
+	padding-left: 18px;
+}
+
+.portier-alert__list a {
+	color: var(--portier-color-text);
+	text-underline-offset: 3px;
+}
+
+.portier-alert--error {
+	border-color: color-mix(in srgb, var(--portier-color-error) 28%, transparent);
+	background: var(--portier-color-error-bg);
+	color: var(--portier-color-error);
+}
+
+.portier-alert--success {
+	border-color: color-mix(in srgb, var(--portier-color-success) 28%, transparent);
+	background: var(--portier-color-success-bg);
+	color: var(--portier-color-success);
+}
+
+.portier-alert--info {
+	border-color: color-mix(in srgb, var(--portier-color-info) 28%, transparent);
+	background: var(--portier-color-info-bg);
+	color: var(--portier-color-info);
+}
+
+.portier-error-summary:focus {
+	outline: 2px solid var(--portier-color-focus);
+	outline-offset: 2px;
+}
+
+/* -------- One-time code (one real input, six visual slots) */
+
+.portier-otp {
+	position: relative;
+}
+
+/* Without JavaScript: a large, plain field. */
+.portier-otp__input {
+	width: 100%;
+	height: 60px;
+	padding: 0 16px;
+	border: 1px solid var(--portier-color-border);
+	border-radius: var(--portier-radius-field);
+	background: var(--portier-color-field);
+	color: var(--portier-color-text);
+	font-family: ui-monospace, SFMono-Regular, menlo, consolas, monospace;
+	font-size: 1.625rem;
+	letter-spacing: 0.4em;
+}
+
+.portier-otp__input:focus {
+	border-color: var(--portier-color-focus);
+	outline: none;
+	box-shadow: 0 0 0 1px var(--portier-color-focus), 0 0 0 5px color-mix(in srgb, var(--portier-color-focus) 18%, transparent);
+}
+
+.portier-otp__slots {
+	display: none;
+}
+
+/* Enhanced: input lies transparently over the slots (keeps focus, paste). */
+.portier-otp.is-enhanced .portier-otp__slots {
+	display: flex;
+	align-items: center;
+	gap: 8px;
+}
+
+.portier-otp.is-enhanced .portier-otp__input {
+	position: absolute;
+	inset: 0;
+	z-index: 1;
+	border-color: transparent;
+	background: transparent;
+	box-shadow: none;
+	color: transparent;
+	caret-color: transparent;
+	font-size: 1rem;
+	letter-spacing: 0;
+	cursor: text;
+}
+
+.portier-otp__slot {
+	display: grid;
+	flex: 1;
+	height: 60px;
+	border: 1px solid var(--portier-color-border);
+	border-radius: var(--portier-radius-field);
+	background: var(--portier-color-field);
+	font-family: ui-monospace, SFMono-Regular, menlo, consolas, monospace;
+	font-size: 1.625rem;
+	font-weight: 500;
+	place-items: center;
+	transition: border-color 120ms var(--portier-ease), box-shadow 120ms var(--portier-ease);
+}
+
+.portier-otp__sep {
+	flex: none;
+	width: 10px;
+	height: 2px;
+	border-radius: 1px;
+	background: var(--portier-color-border);
+}
+
+.portier-otp.is-focused .portier-otp__slot.is-active {
+	border-color: var(--portier-color-focus);
+	box-shadow: 0 0 0 1px var(--portier-color-focus), 0 0 0 5px color-mix(in srgb, var(--portier-color-focus) 18%, transparent);
+}
+
+.portier-otp.is-focused .portier-otp__slot.is-active:empty::after {
+	content: "";
+	width: 2px;
+	height: 26px;
+	background: var(--portier-color-focus);
+	animation: portier-blink 1s steps(1) infinite;
+}
+
+.portier-field.is-invalid .portier-otp__slot,
+.portier-field.is-invalid .portier-otp__input {
+	border-color: var(--portier-color-error);
+}
+
+@keyframes portier-blink {
+
+	50% {
+		opacity: 0;
+	}
+}
+
+/* -------- 2FA setup & recovery codes */
+
+.portier-steps {
+	display: flex;
+	gap: 6px;
+	margin: 0;
+}
+
+.portier-steps span {
+	flex: 1;
+	height: 4px;
+	border-radius: 2px;
+	background: var(--portier-color-divider);
+}
+
+.portier-steps span.is-done {
+	background: var(--portier-color-accent);
+}
+
+.portier-overline {
+	margin: -12px 0 0;
+	color: var(--portier-color-accent);
+	font-size: 0.75rem;
+	font-weight: 500;
+	letter-spacing: 0.06em;
+	text-transform: uppercase;
+}
+
+.portier-qr-card {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	gap: 16px;
+	padding: 16px;
+	border: 1px solid var(--portier-color-divider);
+	border-radius: 18px;
+	background: var(--portier-color-surface);
+}
+
+.portier-qr {
+	flex: none;
+	width: 128px;
+	height: 128px;
+	padding: 8px;
+	border-radius: 10px;
+	background: #fff; /* QR codes need a light background in dark mode, too. */
+}
+
+.portier-qr svg {
+	display: block;
+	width: 100%;
+	height: 100%;
+}
+
+.portier-qr-card__key {
+	display: grid;
+	flex: 1;
+	gap: 8px;
+	min-width: 180px;
+}
+
+.portier-secret {
+	margin: 0;
+	font-family: ui-monospace, SFMono-Regular, menlo, consolas, monospace;
+	font-size: 0.9375rem;
+	font-weight: 500;
+	letter-spacing: 0.08em;
+	overflow-wrap: anywhere;
+}
+
+.portier-chip-button {
+	display: inline-flex;
+	align-items: center;
+	justify-self: start;
+	gap: 6px;
+	min-height: 32px;
+	padding: 6px 10px;
+	border: 0;
+	border-radius: 8px;
+	background: var(--portier-color-chip);
+	color: var(--portier-color-text);
+	font: inherit;
+	font-size: 0.8125rem;
+	font-weight: 500;
+	cursor: pointer;
+}
+
+.portier-chip-button[hidden] {
+	display: none;
+}
+
+.portier-codes {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	gap: 10px 12px;
+	margin: 0;
+	padding: 18px 20px;
+	border-radius: 16px;
+	background: var(--portier-color-chip);
+	font-family: ui-monospace, SFMono-Regular, menlo, consolas, monospace;
+	font-size: 0.9375rem;
+	font-weight: 500;
+	letter-spacing: 0.06em;
+	list-style: none;
+}
+
+/* Wraps instead of squeezing: some labels are long ("Herunterladen"). */
+.portier-code-actions {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 8px;
+}
+
+.portier-code-actions[hidden] {
+	display: none;
+}
+
+.portier-code-actions .portier-button {
+	flex: 1 1 auto;
+	min-height: 44px;
+	padding: 0 8px;
+	font-size: 0.875rem;
+}
+
+/* -------- Magic link */
+
+.portier-device {
+	display: flex;
+	align-items: center;
+	gap: 14px;
+	padding: 16px;
+	border-radius: 14px;
+	background: var(--portier-color-chip);
+}
+
+.portier-device__icon {
+	display: grid;
+	flex: none;
+	width: 40px;
+	height: 40px;
+	border-radius: 12px;
+	background: var(--portier-color-surface);
+	place-items: center;
+}
+
+.portier-device__text {
+	display: grid;
+	gap: 2px;
+	margin: 0;
+	font-size: 0.875rem;
+}
+
+.portier-device__text span {
+	color: var(--portier-color-muted);
+	font-size: 0.8125rem;
+}
+
+.portier-alt-method {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: 8px;
+	margin: 0;
+	color: var(--portier-color-accent);
+	font-size: 0.875rem;
+}
+
+/* -------- Two-step login: account chip (Figma "Account chip") */
+
+.portier-account {
+	display: flex;
+	align-items: center;
+	gap: 10px;
+	padding: 6px;
+	border-radius: 999px;
+	background: var(--portier-color-chip);
+}
+
+.portier-account__avatar {
+	display: grid;
+	flex: none;
+	width: 32px;
+	height: 32px;
+	border-radius: 50%;
+	background: linear-gradient(135deg, #a78bfa, #60a5fa);
+	color: #fff;
+	font-size: 0.875rem;
+	font-weight: 600;
+	place-items: center;
+}
+
+.portier-account__login {
+	flex: 1;
+	min-width: 0;
+	overflow: hidden;
+	font-size: 0.9375rem;
+	font-weight: 500;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}
+
+.portier-account__change {
+	display: inline-flex;
+	flex: none;
+	align-items: center;
+	min-height: 28px;
+	padding: 0 12px;
+	border: 1px solid var(--portier-color-secondary-border);
+	border-radius: 999px;
+	background: var(--portier-color-surface);
+	color: var(--portier-color-text);
+	font-size: 0.8125rem;
+	font-weight: 500;
+	text-decoration: none;
+}
+
+.portier-account__change:hover {
+	background: var(--portier-color-secondary);
+}
+
+/* -------- Social login (Figma: "oder" divider, row of provider buttons) */
+
+.portier-divider {
+	display: flex;
+	align-items: center;
+	gap: 12px;
+	color: var(--portier-color-muted);
+	font-size: 0.8125rem;
+}
+
+.portier-divider::before,
+.portier-divider::after {
+	flex: 1;
+	height: 1px;
+	background: var(--portier-color-divider);
+	content: "";
+}
+
+.portier-social {
+	display: grid;
+	gap: 12px;
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+.portier-social--compact {
+	grid-template-columns: repeat(auto-fit, minmax(72px, 1fr));
+}
+
+.portier-social__button .portier-icon--brand {
+	flex: none;
+}
+
+/* Small text, but still a 24 px target (WCAG 2.5.8). */
+.portier-switch .portier-link,
+.portier-alt-method .portier-link {
+	display: inline-flex;
+	align-items: center;
+	min-height: 24px;
+}
+
+@media print {
+
+	/* Printing the recovery codes: only the codes. */
+	.portier-backdrop,
+	.portier-header,
+	.portier-footer,
+	.portier-form,
+	.portier-code-actions,
+	.portier-steps,
+	.portier-overline,
+	.portier-skip-link {
+		display: none !important;
+	}
+
+	.portier-card {
+		border: 0;
+		background: #fff;
+		box-shadow: none;
+		color: #000;
+	}
+}
+
+/* -------- Other methods: passkey button and social providers (admin order) */
+
+.portier-methods {
+	display: grid;
+	gap: 12px;
+}
+
+.portier-passkey-button[hidden],
+.portier-divider[hidden] {
+	display: none;
+}
+
+/* -------- Passkey screen (Figma "04 · Passkey · wartet") */
+
+.portier-passkey {
+	display: grid;
+	gap: 20px;
+	justify-items: center;
+	text-align: center;
+}
+
+.portier-passkey .portier-heading {
+	justify-items: center;
+}
+
+.portier-passkey__pulse {
+	position: relative;
+	display: grid;
+	width: 168px;
+	height: 168px;
+	place-items: center;
+}
+
+.portier-passkey__ring {
+	position: absolute;
+	border-radius: 50%;
+	background: color-mix(in srgb, var(--portier-color-accent) 6%, transparent);
+	animation: portier-pulse 2.4s ease-in-out infinite;
+}
+
+.portier-passkey__ring:nth-child(1) {
+	inset: 0;
+}
+
+.portier-passkey__ring:nth-child(2) {
+	inset: 18px;
+	background: color-mix(in srgb, var(--portier-color-accent) 9%, transparent);
+	animation-delay: 0.2s;
+}
+
+.portier-passkey__ring:nth-child(3) {
+	inset: 36px;
+	background: color-mix(in srgb, var(--portier-color-accent) 14%, transparent);
+	animation-delay: 0.4s;
+}
+
+.portier-passkey__core {
+	position: relative;
+	display: grid;
+	width: 72px;
+	height: 72px;
+	border-radius: 50%;
+	background: var(--portier-color-accent);
+	box-shadow: 0 12px 28px -6px color-mix(in srgb, var(--portier-color-accent) 40%, transparent);
+	color: var(--portier-color-on-primary);
+	place-items: center;
+}
+
+/* Not waiting any more (cancelled, failed): the pulse rests. */
+.portier-passkey.is-failed .portier-passkey__ring {
+	animation: none;
+}
+
+@keyframes portier-pulse {
+
+	0%,
+	100% {
+		opacity: 1;
+		transform: scale(1);
+	}
+
+	50% {
+		opacity: 0.6;
+		transform: scale(0.94);
+	}
+}
+
+.portier-passkey__status {
+	display: inline-flex;
+	align-items: center;
+	gap: 10px;
+	min-height: 40px;
+	margin: 0;
+	padding: 10px 16px;
+	border-radius: 999px;
+	background: var(--portier-color-chip);
+	color: var(--portier-color-text);
+	font-size: 0.875rem;
+	font-weight: 500;
+}
+
+.portier-passkey__status:has([data-portier-passkey-text]:empty) {
+	visibility: hidden;
+}
+
+.portier-passkey__spinner {
+	display: none;
+	flex: none;
+	color: var(--portier-color-accent);
+	animation: portier-spin 0.9s linear infinite;
+}
+
+.portier-passkey.is-busy .portier-passkey__spinner {
+	display: block;
+}
+
+.portier-passkey.is-failed .portier-passkey__status {
+	border-radius: var(--portier-radius-field);
+	background: var(--portier-color-error-bg);
+	text-align: start;
+}
+
+.portier-passkey__actions {
+	display: grid;
+	gap: 12px;
+	width: 100%;
+}
+
+/* Buttons set their own display: keep [hidden] working (e.g. "Try again"). */
+.portier-passkey__actions [hidden] {
+	display: none;
+}
+
+.portier-passkey + .portier-switch {
+	text-align: center;
+}
+
+/* -------- Motion
+ * Screen changes (View Transitions, enhance.js): the card is the box that
+ * grows or shrinks; shared parts (heading, e-mail field, main button, switch
+ * line) move to their new place, all other parts fade on their own.
+ */
+
+::view-transition-group(*) {
+	animation-duration: 320ms;
+	animation-timing-function: var(--portier-ease);
+}
+
+/* The card snapshot holds only its background: stretch it with the box. */
+::view-transition-old(portier-card) {
+	display: none;
+}
+
+::view-transition-new(portier-card) {
+	height: 100%;
+	animation: none;
+}
+
+/* Parts keep their natural size (text is never squeezed), anchored top left. */
+::view-transition-old(*.portier-part),
+::view-transition-new(*.portier-part) {
+	width: auto;
+	height: auto;
+}
+
+/*
+ * Parts only on one screen (no partner: only child of their pair): leaving
+ * ones fade out in the first part, new ones fade in after it – so nothing
+ * overlaps the parts that move.
+ */
+::view-transition-old(*.portier-part):only-child {
+	animation: portier-leave 140ms ease-out both;
+}
+
+::view-transition-new(*.portier-part):only-child {
+	animation: portier-enter 180ms ease-out 140ms both;
+}
+
+@keyframes portier-leave {
+
+	to {
+		opacity: 0;
+	}
+}
+
+@keyframes portier-enter {
+
+	from {
+		opacity: 0;
+	}
+}
+
+@media (prefers-reduced-motion: reduce) {
+
+	.portier-aurora,
+	.portier-passkey__ring,
+	.portier-passkey__spinner,
+	.portier-button[aria-busy="true"] .portier-button__spinner,
+	.portier-otp__slot::after {
+		animation: none;
+	}
+
+	.portier-check__mark,
+	.portier-check__icon {
+		transition: none;
+	}
+
+	::view-transition-group(*),
+	::view-transition-old(*),
+	::view-transition-new(*) {
+		animation: none;
+	}
+
+	* {
+		transition-duration: 0.01ms !important;
+	}
+}
+
+/* -------- Windows high contrast */
+
+@media (forced-colors: active) {
+
+	.portier-backdrop {
+		display: none;
+	}
+
+	.portier-card,
+	.portier-input,
+	.portier-button,
+	.portier-alert {
+		border: 1px solid CanvasText;
+	}
+
+	.portier-input:focus-within {
+		outline: 2px solid Highlight;
+		outline-offset: 2px;
+	}
+
+	/* The drawn checkbox must stay visible with system colours. */
+	.portier-check__mark {
+		border-color: CanvasText;
+	}
+
+	.portier-check__control:checked + .portier-check__mark {
+		border-color: Highlight;
+		background: Highlight;
+		color: HighlightText;
+	}
+
+	.portier-check__control:focus-visible + .portier-check__mark {
+		outline-color: Highlight;
+	}
+}

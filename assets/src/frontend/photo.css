@@ -1,0 +1,132 @@
+/**
+ * Background image (Figma "Hintergrundbild").
+ *
+ * The image lies behind the template background; the template background
+ * becomes an overlay with the configured opacity (--portier-overlay).
+ * Readability first: with an image, every text outside the form card sits on
+ * a glass plate, and templates without a card get one on small screens.
+ */
+
+.portier-photo {
+	position: fixed;
+	inset: 0;
+	z-index: 0;
+	background:
+		var(--portier-photo-mobile) var(--portier-photo-position) / cover
+		no-repeat;
+	pointer-events: none;
+}
+
+/* The template background turns into the overlay. */
+[data-portier-photo] .portier-backdrop {
+	background-color: var(--portier-color-bg);
+	opacity: var(--portier-overlay, 0.5);
+}
+
+[data-portier-photo][data-portier-template="cloud"] .portier-backdrop {
+	background-image: linear-gradient(135deg, #ffe4d6 0%, #f6e6f7 50%, #e2e4ff 100%);
+}
+
+[data-portier-photo][data-portier-template="studio"] .portier-backdrop {
+	background: var(--portier-studio-panel);
+}
+
+[data-portier-photo][data-portier-template="studio"] .portier-page {
+	background: none;
+}
+
+/* Glass plates for text outside the card. */
+[data-portier-photo] :is(.portier-brand, .portier-footer__copy),
+[data-portier-photo] .portier-footer__links a {
+	border-radius: 999px;
+	background: var(--portier-color-glass);
+	backdrop-filter: blur(16px);
+	-webkit-backdrop-filter: blur(16px);
+}
+
+[data-portier-photo] .portier-brand {
+	padding: 4px 14px 4px 6px;
+}
+
+[data-portier-photo] .portier-footer__links a,
+[data-portier-photo] .portier-footer__copy {
+	padding: 6px 12px;
+}
+
+[data-portier-photo] .portier-panel__content {
+	padding: 24px;
+	border-radius: 20px;
+	background: var(--portier-color-glass);
+	backdrop-filter: blur(20px);
+	-webkit-backdrop-filter: blur(20px);
+}
+
+/* White text on the Studio brand area: dark glass. */
+[data-portier-photo][data-portier-template="studio"] :is(.portier-brand, .portier-panel__content) {
+	background: rgb(15 14 23 / 55%);
+}
+
+/* The Enterprise header bar is solid already. */
+[data-portier-photo][data-portier-template="enterprise"] .portier-brand {
+	padding: 0;
+	background: none;
+	backdrop-filter: none;
+	-webkit-backdrop-filter: none;
+}
+
+/* Templates without a card on phones get a glass card over the image. */
+[data-portier-photo]:is([data-portier-template="pure"], [data-portier-template="midnight"], [data-portier-template="journal"]) .portier-card {
+	margin: 0 16px 16px;
+	border-radius: max(var(--portier-radius-card), 16px);
+	background: var(--portier-color-glass);
+	backdrop-filter: blur(30px);
+	-webkit-backdrop-filter: blur(30px);
+}
+
+/* Option "image on mobile devices" off: phones show the plain template. */
+@media (max-width: 767px) {
+
+	[data-portier-photo="desktop"] .portier-photo {
+		display: none;
+	}
+
+	[data-portier-photo="desktop"] .portier-backdrop {
+		background: none;
+		opacity: 1;
+	}
+}
+
+@media (min-width: 768px) {
+
+	.portier-photo {
+		background-image: var(--portier-photo);
+	}
+}
+
+/* Split layouts: the image fills the brand area; the form side stays calm. */
+@media (min-width: 1024px) {
+
+	[data-portier-photo]:is([data-portier-template="pure"], [data-portier-template="studio"]) .portier-panel {
+		background: none;
+	}
+
+	[data-portier-photo][data-portier-template="studio"] :is(.portier-photo, .portier-backdrop) {
+		right: 50%;
+	}
+
+	[data-portier-photo][data-portier-template="pure"] :is(.portier-photo, .portier-backdrop) {
+		left: 640px;
+	}
+
+	[data-portier-photo][data-portier-template="pure"] .portier-backdrop {
+		background-color: #f6f6f6;
+	}
+
+	/* On the desktop these cards are plain again (no image behind them). */
+	[data-portier-photo]:is([data-portier-template="pure"], [data-portier-template="studio"]) .portier-card {
+		margin: 0;
+		background: none;
+		backdrop-filter: none;
+		-webkit-backdrop-filter: none;
+	}
+}
